@@ -1,93 +1,98 @@
 {
   "name": "INTIKHAB KHURSHEED",
-  "role": "Web Developer",
-  "summary": "Full-Stack Developer with 2+ years of experience building scalable web applications using the MERN stack and Angular. Developed healthcare platforms, real-time task managers, and enterprise solutions with seamless REST API integration. Passionate about writing clean, efficient code and delivering user-focused applications.",
-  "about": "Full-Stack Developer building production-ready web apps with the MERN stack & Angular. I've shipped applications like TaskFlow (real-time task manager) and GRT Health platform, focusing on scalable architecture, responsive UI, and robust APIs. Passionate about creating solutions that make a difference.",
+  "display_name": "Intikhab Khursheed",
+  "name_parts": ["INTIKHAB", "KHURSHEED"],
+  "role": "Full Stack JavaScript Developer",
+  "yearsExperience": "2+",
+  "projectCount": 15,
+  "techCount": 30,
+  "domainCount": 4,
+  "domainHints": ["Healthcare", "SaaS", "Productivity", "Enterprise"],
+  "summary": "I build modern web experiences with React, Angular, Node.js, and MongoDB, combining clean UI, scalable architecture, and thoughtful product decisions.",
+  "about": "Full Stack Developer building production-ready web apps with the MERN stack and Angular. I have shipped healthcare platforms, task managers, dashboards, and enterprise tools with a focus on responsive UI, robust APIs, and fast iteration.",
   "location": "Peshawar, Pakistan",
   "email": "intikhabkhursheed@gmail.com",
   "phone": "+92 335 9919883",
-  "resume_url": "assets/Intikhab%20khursheed%20Resume.pdf",
-  "headshot": "assets/images/profile.png",
+  "resume_url": "assets/Intikhab-Khursheed-Resume.pdf",
+  "headshot": "assets/images/profile-cutout.png",
+  "trustedTechnologies": ["React", "Angular", "Node.js", "MongoDB", "TypeScript", "Tailwind CSS", "AWS", "Docker"],
+  "aboutStats": [
+    { "value": "2+", "label": "Years Experience" },
+    { "value": "15+", "label": "Projects Completed" },
+    { "value": "100%", "label": "Client Focus" },
+    { "value": "24/7", "label": "Problem Solving" }
+  ],
   "skills": [
-    { "category": "Frontend", "items": ["JavaScript (ES6+)", "React.js", "Next.js", "Angular", "TypeScript", "HTML5", "CSS3", "SCSS", "TailwindCSS"] },
-    { "category": "Backend", "items": ["Node.js", "Express.js", "REST API integration"] },
-    { "category": "Databases", "items": ["MongoDB", "MySQL"] },
-    { "category": "Tools & Deployment", "items": ["Git", "GitHub", "Firebase", "Vercel", "Docker (basic)", "Figma", "API Testing"] },
-    { "category": "Soft Skills", "items": ["Team Collaboration", "Agile Development", "Problem Solving", "Debugging", "Cross-browser Compatibility"] }
+    { "category": "Frontend", "items": ["JavaScript (ES6+)", "React.js", "Next.js", "Angular", "TypeScript", "HTML5", "CSS3", "SCSS", "Tailwind CSS"] },
+    { "category": "Backend", "items": ["Node.js", "Express.js", "REST APIs", "JWT", "Firebase Auth"] },
+    { "category": "Databases", "items": ["MongoDB", "MySQL", "Firestore", "Local Storage"] },
+    { "category": "Tools", "items": ["Git", "GitHub", "Vercel", "Docker", "Figma", "Postman", "Firebase"] },
+    { "category": "Quality", "items": ["Agile Collaboration", "Debugging", "Performance Tuning", "Responsive UI", "Accessibility"] }
   ],
   "projects": [
     {
       "title": "CampaignForge",
+      "subtitle": "Campaign Management Platform",
       "description": "A modern campaign management platform built with React, TypeScript, and Node.js.",
-      "features": [
-        "Secure session-based authentication with protected routes",
-        "Dashboard with campaign metrics and analytics",
-        "Create and manage marketing campaigns",
-        "Lead/contact management",
-        "Task assignment and tracking",
-        "Analytics and reporting"
-      ],
-      "tech": ["React 18", "TypeScript", "Vite", "TanStack Query", "Wouter", "TailwindCSS", "shadcn/ui", "Node.js", "Express", "MongoDB"],
+      "tech": ["React 18", "TypeScript", "Vite", "TanStack Query", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
       "live": "",
       "repo": "https://github.com/IntikhabKhursheed/CampaignForge"
     },
     {
-      "title": "TaskFlow – Smart Task Manager",
-      "description": "Modern task management app with Kanban board, task list, real-time Firebase sync, and a polished Ant Design UI.",
-      "features": [
-        "Firebase Auth + Firestore with real-time updates (onSnapshot)",
-        "Kanban board with drag-and-drop between columns",
-        "Quick Add, Task modal and edit drawer",
-        "Task List with search, status/priority filters and row actions",
-        "Overdue / due soon badges"
-      ],
-      "tech": ["Vite", "React 18", "TypeScript", "Ant Design", "Firebase Auth", "Firestore", "@hello-pangea/dnd", "react-hook-form", "dayjs"],
+      "title": "TaskFlow",
+      "subtitle": "Smart Task Manager",
+      "description": "A polished task management app with Kanban boards, filters, and real-time Firebase sync.",
+      "tech": ["React 18", "TypeScript", "Ant Design", "Firebase Auth", "Firestore", "DnD", "dayjs"],
       "live": "",
       "repo": "https://github.com/IntikhabKhursheed/TaskFlow-SmartTaskManager"
     },
     {
-      "title": "Invoice Dashboard Design",
-      "description": "Full-stack invoice management platform for freelancers and small businesses to create, manage, and track invoices with a clean, responsive dashboard.",
-      "features": [
-        "Create, edit and manage invoices",
-        "Client management and payment tracking",
-        "Dashboard with summaries and status tracking",
-        "Responsive, intuitive UI",
-        "Vercel-ready deployment"
-      ],
-      "tech": ["React", "Next.js", "Vite", "TailwindCSS", "Node.js", "Express.js", "MongoDB", "Vercel"],
+      "title": "Invoice Dashboard",
+      "subtitle": "Billing & Tracking System",
+      "description": "Full-stack invoice management platform for freelancers and small businesses.",
+      "tech": ["Next.js", "React", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "Vercel"],
       "live": "",
       "repo": "https://github.com/IntikhabKhursheed/StreamlineInvoice"
     },
     {
-      "title": "GRT Health – Healthcare Management Platform",
-      "description": "Comprehensive healthcare platform for patient monitoring and medical data management with real-time health metrics and automated reporting.",
-      "features": [
-        "Responsive patient monitoring dashboards with real-time data visualization",
-        "Patient vital signs and medical metrics tracking",
-        "Optimized performance with 40% faster dashboard load time",
-        "Seamless .NET Core API integration",
-        "Accessible and intuitive interfaces for medical staff",
-        "Comprehensive error handling and data validation for critical healthcare data"
-      ],
-      "tech": ["Angular", "TypeScript", "RxJS", "SCSS", ".NET Core APIs", "RESTful Services", "Lazy Loading"],
+      "title": "GRT Health",
+      "subtitle": "Healthcare Platform",
+      "description": "Healthcare platform for patient monitoring, dashboards, and automated reporting.",
+      "tech": ["Angular", "TypeScript", "RxJS", "SCSS", ".NET Core", "REST Services"],
       "live": "",
       "repo": ""
     },
     {
-      "title": "DHQ Hospital Management System",
-      "description": "Cross-platform desktop application for DHQ Hospital Bajour to digitize patient management, appointment scheduling, and medical records with offline-first architecture.",
-      "features": [
-        "Complete desktop application for Windows and macOS compatibility",
-        "Offline-first architecture with local data storage",
-        "Patient registration and appointment scheduling modules",
-        "Medical history tracking and management",
-        "Intuitive UI designed for hospital staff with varying technical expertise",
-        "Data export/import capabilities for backup and reporting"
-      ],
-      "tech": ["Electron.js", "JavaScript", "HTML5", "CSS3", "Node.js", "Local Storage API"],
+      "title": "DHQ Hospital System",
+      "subtitle": "Desktop Application",
+      "description": "Offline-first desktop application for patient management and appointment scheduling.",
+      "tech": ["Electron.js", "JavaScript", "HTML5", "CSS3", "Node.js", "Local Storage"],
       "live": "",
       "repo": ""
+    },
+    {
+      "title": "CareOS",
+      "subtitle": "AI Hospital Management System",
+      "description": "Production-ready hospital management system with Grok AI for clinical notes, drug interaction checks, and real-time alerts.",
+      "tech": ["React", "Angular", "Node.js", "MongoDB", "Tailwind CSS", "AWS", "Docker"],
+      "live": "",
+      "repo": "https://github.com/IntikhabKhursheed"
+    },
+    {
+      "title": "Nexus AI",
+      "subtitle": "AI Project Planning Platform",
+      "description": "AI-powered task breakdowns and intelligent workflow management with interactive planning dashboards.",
+      "tech": ["React", "Node.js", "MongoDB", "Tailwind CSS", "Docker"],
+      "live": "",
+      "repo": "https://github.com/IntikhabKhursheed"
+    },
+    {
+      "title": "EstateIQ",
+      "subtitle": "AI Real Estate Platform",
+      "description": "Property listing, valuation, and AI-powered investment scoring with natural language property search and Gemini valuation.",
+      "tech": ["Angular", "Node.js", "MongoDB", "Gemini AI", "Tailwind CSS"],
+      "live": "",
+      "repo": "https://github.com/IntikhabKhursheed"
     }
   ],
   "experience": [
@@ -95,18 +100,18 @@
       "title": "Frontend Developer",
       "company": "Troon Technologies",
       "location": "Islamabad, Pakistan",
-      "dates": "Sep 2024 – Aug 2025",
+      "dates": "Sep 2024 - Aug 2025",
       "bullets": [
         "Developed responsive web applications using Angular, TypeScript, HTML, SCSS, and JavaScript.",
-        "Integrated APIs to deliver real-time data and enhanced user experience.",
-        "Collaborated with design and backend teams to ensure seamless functionality."
+        "Integrated APIs to deliver real-time data and improved user experience.",
+        "Collaborated with design and backend teams to ensure smooth functionality."
       ]
     },
     {
       "title": "Full-Stack Developer (MERN)",
       "company": "Codnocrats Innovating Solution",
       "location": "Peshawar, Pakistan",
-      "dates": "Mar 2023 – Sep 2024",
+      "dates": "Mar 2023 - Sep 2024",
       "bullets": [
         "Built and maintained MERN stack applications with clean and scalable code.",
         "Developed and integrated REST APIs for robust backend communication.",
@@ -114,13 +119,9 @@
       ]
     }
   ],
-  "education": [
-    { "title": "MCS Computer Science", "school": "Qurtuba University, Peshawar", "dates": "2022 – 2024" },
-    { "title": "BSc Computer Science", "school": "Govt Degree College, Peshawar", "dates": "2020 – 2022" },
-    { "title": "Diploma in Information Technology (DIT)", "school": "Smart Learning Academy, Peshawar", "dates": "2021 – 2022" }
-  ],
   "socials": [
     { "label": "LinkedIn", "url": "https://www.linkedin.com/in/intikhab-khursheed-afridi-028a51285/" },
-    { "label": "GitHub", "url": "https://github.com/IntikhabKhursheed" }
+    { "label": "GitHub", "url": "https://github.com/IntikhabKhursheed" },
+    { "label": "Email", "url": "mailto:intikhabkhursheed@gmail.com" }
   ]
 }
