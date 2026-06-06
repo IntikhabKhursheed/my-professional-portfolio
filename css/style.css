@@ -675,6 +675,11 @@ button {
   font-weight: 600;
 }
 
+.impact-pill {
+  justify-self: end;
+  margin-bottom: 8px;
+}
+
 .project-track {
   display: grid;
   grid-auto-flow: column;
@@ -901,7 +906,7 @@ button {
 .experience-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  gap: 18px;
+  gap: 28px;
   align-items: start;
 }
 
@@ -957,7 +962,11 @@ button {
 .impact-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+  gap: 18px;
+  align-content: start;
+  justify-self: end;
+  width: min(100%, 660px);
+  margin-top: 6px;
 }
 
 .impact-card {
