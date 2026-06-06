@@ -208,13 +208,43 @@ function renderExperience(d) {
 
 function setupProjectScroll() {
   const track = document.getElementById('projectsGrid');
-  const amount = () => Math.max(320, Math.min(track.clientWidth * 0.9, 760));
-  document.getElementById('projectPrev').addEventListener('click', () => {
-    track.scrollBy({ left: -amount(), behavior: 'smooth' });
-  });
-  document.getElementById('projectNext').addEventListener('click', () => {
-    track.scrollBy({ left: amount(), behavior: 'smooth' });
-  });
+  const prev = document.getElementById('projectPrev');
+  const next = document.getElementById('projectNext');
+
+  if (!track || !prev || !next) return;
+
+  const getGap = () => {
+    const styles = window.getComputedStyle(track);
+    const gap = parseFloat(styles.columnGap || styles.gap || '0');
+    return Number.isFinite(gap) ? gap : 18;
+  };
+
+  const getStep = () => {
+    const firstCard = track.firstElementChild;
+    if (!firstCard) {
+      return Math.max(320, Math.min(track.clientWidth * 0.9, 760));
+    }
+    const width = firstCard.getBoundingClientRect().width;
+    return Math.max(320, width + getGap());
+  };
+
+  const updateButtons = () => {
+    const maxScrollLeft = Math.max(0, track.scrollWidth - track.clientWidth);
+    prev.disabled = track.scrollLeft <= 0;
+    next.disabled = track.scrollLeft >= maxScrollLeft - 1;
+  };
+
+  const scrollProjects = (direction) => {
+    const maxScrollLeft = Math.max(0, track.scrollWidth - track.clientWidth);
+    const nextLeft = Math.max(0, Math.min(track.scrollLeft + (direction * getStep()), maxScrollLeft));
+    track.scrollTo({ left: nextLeft, behavior: 'smooth' });
+  };
+
+  prev.addEventListener('click', () => scrollProjects(-1));
+  next.addEventListener('click', () => scrollProjects(1));
+  track.addEventListener('scroll', updateButtons, { passive: true });
+  window.addEventListener('resize', updateButtons);
+  updateButtons();
 }
 
 function setupContactForm(d) {

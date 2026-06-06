@@ -966,7 +966,7 @@ button {
   align-content: start;
   justify-self: end;
   width: min(100%, 660px);
-  margin-top: 6px;
+  margin-top: 20px;
 }
 
 .impact-card {
@@ -1155,6 +1155,12 @@ button {
   background: rgba(12, 18, 38, 0.92);
   color: var(--text);
   font-size: 1.5rem;
+}
+
+.icon-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
 }
 
 .reveal {
