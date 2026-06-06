@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="DHQ Hospital preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1526"/>
+      <stop offset="55%" stop-color="#12305f"/>
+      <stop offset="100%" stop-color="#1d72c6"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6fd2ff"/>
+      <stop offset="100%" stop-color="#76ff9f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect x="120" y="110" width="960" height="580" rx="30" fill="#0a1120" stroke="#ffffff" stroke-opacity=".08"/>
+  <rect x="150" y="150" width="900" height="64" rx="20" fill="#14213b"/>
+  <rect x="174" y="168" width="160" height="22" rx="11" fill="url(#accent)"/>
+  <rect x="174" y="246" width="180" height="366" rx="24" fill="#101a32"/>
+  <rect x="376" y="246" width="302" height="366" rx="24" fill="#101a32"/>
+  <rect x="700" y="246" width="324" height="366" rx="24" fill="#101a32"/>
+  <rect x="206" y="280" width="116" height="18" rx="9" fill="#6fd2ff"/>
+  <rect x="206" y="324" width="116" height="18" rx="9" fill="#6fd2ff"/>
+  <rect x="206" y="368" width="116" height="18" rx="9" fill="#6fd2ff"/>
+  <rect x="206" y="412" width="116" height="18" rx="9" fill="#6fd2ff"/>
+  <rect x="206" y="456" width="116" height="18" rx="9" fill="#6fd2ff"/>
+  <rect x="408" y="282" width="248" height="24" rx="12" fill="#1f335c"/>
+  <rect x="408" y="324" width="248" height="24" rx="12" fill="#1f335c"/>
+  <rect x="408" y="366" width="248" height="24" rx="12" fill="#1f335c"/>
+  <rect x="408" y="408" width="248" height="24" rx="12" fill="#1f335c"/>
+  <rect x="408" y="450" width="248" height="24" rx="12" fill="#1f335c"/>
+  <rect x="730" y="282" width="260" height="104" rx="22" fill="#1a2b4d"/>
+  <rect x="730" y="404" width="260" height="104" rx="22" fill="#1a2b4d"/>
+  <rect x="730" y="526" width="260" height="54" rx="16" fill="#1a2b4d"/>
+  <path d="M468 528h24v-24h24v24h24v24h-24v24h-24v-24h-24z" fill="#6fd2ff" opacity=".95"/>
+  <path d="M794 340h132m-132 22h92m-92 22h154" stroke="#d8e3ff" stroke-width="10" stroke-linecap="round"/>
+  <path d="M794 462h132m-132 22h92m-92 22h154" stroke="#d8e3ff" stroke-width="10" stroke-linecap="round"/>
+</svg>

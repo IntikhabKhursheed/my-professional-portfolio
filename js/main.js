@@ -231,6 +231,8 @@ function setupContactForm(d) {
     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}\n\nPlease reply to the email address above.`);
     window.location.href = `mailto:${d.email}?subject=${subject}&body=${body}`;
   });
+
+  form.action = `mailto:${d.email || 'intikhabkhursheed@gmail.com'}`;
 }
 
 function setupRevealObserver() {

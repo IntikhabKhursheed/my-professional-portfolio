@@ -375,8 +375,14 @@ button {
 .social-icon-svg {
   width: 20px;
   height: 20px;
-  fill: currentColor;
+  fill: currentColor !important;
+  stroke: currentColor;
   display: block;
+}
+
+.social-icon-svg path {
+  fill: currentColor;
+  stroke: currentColor;
 }
 
 .social-icons a[data-social="linkedin"] {
@@ -699,7 +705,7 @@ button {
 
 .project-media {
   position: relative;
-  min-height: 190px;
+  min-height: 230px;
   padding: 16px;
   border-bottom: 1px solid rgba(141, 158, 255, 0.12);
   overflow: hidden;
@@ -740,7 +746,7 @@ button {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
     linear-gradient(135deg, rgba(31, 42, 78, 0.8), rgba(9, 13, 28, 0.96));
-  min-height: 148px;
+  min-height: 188px;
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -750,7 +756,7 @@ button {
 .project-surface-empty {
   position: relative;
   z-index: 1;
-  min-height: 148px;
+  min-height: 188px;
   border-radius: 18px;
   padding: 16px;
   display: flex;
@@ -762,7 +768,7 @@ button {
 .project-thumb {
   width: 100%;
   height: 100%;
-  min-height: 148px;
+  min-height: 188px;
   object-fit: cover;
   border-radius: 16px;
 }
