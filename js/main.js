@@ -24,7 +24,7 @@ function iconForSocial(label) {
     return '<svg viewBox="0 0 24 24" aria-hidden="true" class="social-icon-svg" fill="currentColor"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm0 3.2V18h16V7.2l-8 5.2-8-5.2Zm8 3.1 8-5.2H4l8 5.2Z"/></svg>';
   }
   if (key === 'whatsapp') {
-    return '<svg viewBox="0 0 24 24" aria-hidden="true" class="social-icon-svg" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.57 15.17L2 22l4.98-1.3A10 10 0 1 0 12 2Zm5.9 14.1c-.24.68-1.2 1.26-1.66 1.33-.42.07-.97.1-1.57-.09-.36-.11-.82-.27-1.42-.53-2.5-1.08-4.13-3.58-4.25-3.75-.11-.16-1-.87-1-1.66 0-.8.42-1.18.57-1.34.15-.16.33-.2.44-.2h.32c.1 0 .23-.04.36.28.13.32.45 1.11.5 1.19.04.09.08.2.01.33-.07.13-.1.21-.2.32-.1.11-.22.25-.32.34-.1.1-.2.21-.08.42.12.2.52.85 1.12 1.38.77.69 1.42.91 1.62 1.01.2.1.32.08.44-.05.13-.13.56-.66.71-.89.14-.23.29-.19.49-.11.2.09 1.28.6 1.5.71.22.11.38.16.44.25.06.09.06.53-.18 1.21Z"/></svg>';
+    return '<svg viewBox="0 0 24 24" aria-hidden="true" class="social-icon-svg" fill="currentColor"><path d="M19.05 4.94A9.9 9.9 0 0 0 12.03 2C6.55 2 2.08 6.46 2.08 11.95c0 1.75.46 3.47 1.33 4.98L2 22l5.22-1.37a9.93 9.93 0 0 0 4.8 1.22h.01c5.48 0 9.95-4.46 9.95-9.95a9.86 9.86 0 0 0-2.93-6.96Zm-7.02 15.23h-.01a8.3 8.3 0 0 1-4.23-1.16l-.3-.18-3.1.81.83-3.02-.2-.31a8.23 8.23 0 0 1-1.28-4.37c0-4.58 3.72-8.3 8.3-8.3 2.22 0 4.31.86 5.87 2.43a8.24 8.24 0 0 1 2.42 5.87c0 4.58-3.72 8.3-8.3 8.3Zm4.55-6.21c-.25-.12-1.47-.72-1.7-.8-.23-.08-.39-.12-.56.12-.16.25-.64.8-.78.96-.14.17-.29.18-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.22-1.45-1.37-1.69-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.24-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.23.25-.87.85-.87 2.06 0 1.22.89 2.39 1.01 2.55.12.16 1.75 2.67 4.23 3.74.59.26 1.06.41 1.42.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.1-.23-.16-.48-.29Z"/></svg>';
   }
   return '<svg viewBox="0 0 24 24" aria-hidden="true" class="social-icon-svg" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 15h-2v-6h2v6Zm0-8h-2V7h2v2Z"/></svg>';
 }
@@ -61,9 +61,10 @@ function setBasics(d) {
   const headshot = document.getElementById('headshot');
   const aboutImage = document.getElementById('aboutImage');
   if (d.headshot) {
-    const src = fixPath(d.headshot);
-    headshot.src = src;
-    aboutImage.src = src;
+    headshot.src = fixPath(d.headshot);
+  }
+  if (d.about_image) {
+    aboutImage.src = fixPath(d.about_image);
   }
 }
 
@@ -249,20 +250,41 @@ function setupProjectScroll() {
 
 function setupContactForm(d) {
   const form = document.getElementById('contactForm');
-  form.addEventListener('submit', (event) => {
+  const status = document.getElementById('contactStatus');
+  if (!form || !status) return;
+
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
-    if (!d.email) return;
 
     const formData = new FormData(form);
-    const name = String(formData.get('name') || '').trim();
-    const email = String(formData.get('email') || '').trim();
-    const message = String(formData.get('message') || '').trim();
-    const subject = encodeURIComponent(`Portfolio enquiry from ${name || 'a visitor'}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}\n\nPlease reply to the email address above.`);
-    window.location.href = `mailto:${d.email}?subject=${subject}&body=${body}`;
-  });
+    const payload = new URLSearchParams();
 
-  form.action = `mailto:${d.email || 'intikhabkhursheed@gmail.com'}`;
+    for (const [key, value] of formData.entries()) {
+      payload.append(key, String(value));
+    }
+
+    status.textContent = 'Sending message...';
+    status.className = 'form-status is-pending';
+
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: payload.toString(),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Request failed with status ${response.status}`);
+      }
+
+      form.reset();
+      status.textContent = 'Message sent successfully. I will get back to you soon.';
+      status.className = 'form-status is-success';
+    } catch (error) {
+      status.textContent = 'Message could not be sent here. Please email me directly at intikhabkhursheed@gmail.com.';
+      status.className = 'form-status is-error';
+    }
+  });
 }
 
 function setupRevealObserver() {

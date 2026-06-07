@@ -428,7 +428,16 @@
         </div>
 
         <div class="contact-card">
-          <form id="contactForm" class="contact-form" action="mailto:intikhabkhursheed@gmail.com" method="post" enctype="text/plain">
+          <form
+            id="contactForm"
+            class="contact-form"
+            name="portfolio-contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="portfolio-contact" />
+            <input type="hidden" name="bot-field" />
             <div class="field-row">
               <label>
                 <span>Name</span>
@@ -444,6 +453,7 @@
               <textarea name="message" rows="6" placeholder="Tell me about your project..." required></textarea>
             </label>
             <button class="btn btn-primary btn-block" type="submit">Send Message <span class="btn-icon">→</span></button>
+            <p id="contactStatus" class="form-status" aria-live="polite"></p>
           </form>
         </div>
       </div>
@@ -486,6 +496,7 @@
       "phone": "+92 335 9919883",
       "resume_url": "assets/Intikhab-Khursheed-Resume.pdf",
       "headshot": "assets/images/profile-cutout.png",
+      "about_image": "assets/images/Roome_v2.png",
       "trustedTechnologies": ["React", "Angular", "Node.js", "MongoDB", "TypeScript", "Tailwind CSS", "AWS", "Docker"],
       "aboutStats": [
         { "value": "2+", "label": "Years Experience" },
