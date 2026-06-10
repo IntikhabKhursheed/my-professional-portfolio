@@ -72,6 +72,14 @@
       "repo": "https://github.com/IntikhabKhursheed"
     },
     {
+      "title": "NexusCRM",
+      "subtitle": "AI-Powered Sales Intelligence Platform",
+      "description": "A multi-tenant CRM for small and mid-sized businesses with AI deal scoring, revenue forecasting, personalized outreach, and subscription-ready SaaS architecture.",
+      "tech": ["Next.js", "React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Socket.io", "Stripe"],
+      "live": "",
+      "repo": "https://github.com/IntikhabKhursheed/nexus-crm"
+    },
+    {
       "title": "Nexus AI",
       "subtitle": "AI Project Planning Platform",
       "description": "AI-powered task breakdowns and intelligent workflow management with interactive planning dashboards.",
