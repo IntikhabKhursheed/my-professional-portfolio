@@ -68,7 +68,7 @@
       "subtitle": "AI Hospital Management System",
       "description": "Production-ready hospital management system with Grok AI for clinical notes, drug interaction checks, and real-time alerts.",
       "tech": ["React", "Angular", "Node.js", "MongoDB", "Tailwind CSS", "AWS", "Docker"],
-      "live": "",
+      "live": "https://careos-hospital-client.vercel.app/login",
       "repo": "https://github.com/IntikhabKhursheed"
     },
     {
@@ -76,7 +76,7 @@
       "subtitle": "AI Project Planning Platform",
       "description": "AI-powered task breakdowns and intelligent workflow management with interactive planning dashboards.",
       "tech": ["React", "Node.js", "MongoDB", "Tailwind CSS", "Docker"],
-      "live": "",
+      "live": "https://nexus-ai-vertax.vercel.app/login",
       "repo": "https://github.com/IntikhabKhursheed"
     },
     {
@@ -84,7 +84,7 @@
       "subtitle": "AI Real Estate Platform",
       "description": "Property listing, valuation, and AI-powered investment scoring with natural language property search and Gemini valuation.",
       "tech": ["Angular", "Node.js", "MongoDB", "Gemini AI", "Tailwind CSS"],
-      "live": "",
+      "live": "https://real-estate-app-client-amber.vercel.app/",
       "repo": "https://github.com/IntikhabKhursheed"
     }
   ],
