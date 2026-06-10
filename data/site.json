@@ -13,7 +13,7 @@
   "location": "Peshawar, Pakistan",
   "email": "intikhabkhursheed@gmail.com",
   "phone": "+92 335 9919883",
-  "resume_url": "assets/Intikhab-Khursheed-Resume.pdf",
+  "resume_url": "assets/Intikhab_Resume.pdf",
   "headshot": "assets/images/profile-cutout.png",
   "about_image": "assets/images/Roome_v2.png",
   "trustedTechnologies": ["React", "Angular", "Node.js", "MongoDB", "TypeScript", "Tailwind CSS", "AWS", "Docker"],
@@ -54,14 +54,6 @@
       "tech": ["Next.js", "React", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "Vercel"],
       "live": "",
       "repo": "https://github.com/IntikhabKhursheed/StreamlineInvoice"
-    },
-    {
-      "title": "GRT Health",
-      "subtitle": "Healthcare Platform",
-      "description": "Healthcare platform for patient monitoring, dashboards, and automated reporting.",
-      "tech": ["Angular", "TypeScript", "RxJS", "SCSS", ".NET Core", "REST Services"],
-      "live": "",
-      "repo": ""
     },
     {
       "title": "DHQ Hospital System",
@@ -123,6 +115,7 @@
   "socials": [
     { "label": "LinkedIn", "url": "https://www.linkedin.com/in/intikhab-khursheed-afridi-028a51285/" },
     { "label": "GitHub", "url": "https://github.com/IntikhabKhursheed" },
-    { "label": "Email", "url": "mailto:intikhabkhursheed@gmail.com" }
+    { "label": "Email", "url": "mailto:intikhabkhursheed@gmail.com" },
+    { "label": "WhatsApp", "url": "https://wa.me/923359919883" }
   ]
 }

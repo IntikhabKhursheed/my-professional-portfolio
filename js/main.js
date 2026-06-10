@@ -2,7 +2,11 @@ const state = { data: null };
 
 function fixPath(p) {
   if (!p) return p;
-  return p.startsWith('/') ? p.slice(1) : p;
+  try {
+    return new URL(p, document.baseURI).href;
+  } catch (error) {
+    return p.startsWith('/') ? p.slice(1) : p;
+  }
 }
 
 function el(tag, cls, text) {
@@ -47,7 +51,12 @@ function setBasics(d) {
     resume.target = '_self';
     resume.rel = '';
     if (d.resume_url.toLowerCase().endsWith('.pdf')) {
-      resume.setAttribute('download', 'Intikhab-Khursheed-Resume.pdf');
+      try {
+        const fileName = new URL(d.resume_url, document.baseURI).pathname.split('/').pop();
+        resume.setAttribute('download', fileName || 'resume.pdf');
+      } catch (error) {
+        resume.setAttribute('download', 'resume.pdf');
+      }
     } else {
       resume.removeAttribute('download');
     }
@@ -119,7 +128,7 @@ function renderStats(d) {
 
 function renderProjects(d) {
   const grid = document.getElementById('projectsGrid');
-  if (grid.children.length > 0) return;
+  if (!grid || grid.children.length > 0) return;
 
   const variants = [
     ['project-media-a', 'project-surface-a'],
@@ -238,7 +247,11 @@ function setupProjectScroll() {
   const scrollProjects = (direction) => {
     const maxScrollLeft = Math.max(0, track.scrollWidth - track.clientWidth);
     const nextLeft = Math.max(0, Math.min(track.scrollLeft + (direction * getStep()), maxScrollLeft));
-    track.scrollTo({ left: nextLeft, behavior: 'smooth' });
+    if (typeof track.scrollTo === 'function') {
+      track.scrollTo({ left: nextLeft, behavior: 'smooth' });
+    } else {
+      track.scrollLeft = nextLeft;
+    }
   };
 
   prev.addEventListener('click', () => scrollProjects(-1));
