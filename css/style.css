@@ -1273,6 +1273,7 @@ a:focus-visible,
   width: 40px;
   height: 40px;
   display: grid;
+  padding-top: 10px;
   place-items: center;
   border: 1px solid var(--border-color);
   color: var(--text-secondary);
@@ -1311,6 +1312,8 @@ a:focus-visible,
 }
 
 .contact-row-icon svg {
+  justify-self: center !important;
+  align-self: center !important;
   width: 18px;
   height: 18px;
   display: block;
