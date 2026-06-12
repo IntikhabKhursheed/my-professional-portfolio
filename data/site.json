@@ -46,28 +46,46 @@
       "accent": "cyan",
       "mode": "progress",
       "items": [
-        { "name": "React / Next.js", "value": 95 },
+        { "name": "React", "value": 95 },
+        { "name": "Next.js", "value": 90 },
         { "name": "Angular", "value": 85 },
-        { "name": "TypeScript", "value": 90 },
-        { "name": "Tailwind CSS", "value": 92 }
+        { "name": "TypeScript", "value": 88 },
+        { "name": "Tailwind CSS", "value": 95 },
+        { "name": "JavaScript", "value": 95 }
       ]
     },
     {
       "category": "Backend",
-      "accent": "purple",
+      "accent": "cyan",
       "mode": "progress",
       "items": [
-        { "name": "Node.js / Express", "value": 93 },
-        { "name": "MongoDB", "value": 88 },
-        { "name": "REST APIs / JWT", "value": 90 },
-        { "name": "Docker / AWS", "value": 78 }
+        { "name": "Node.js", "value": 82 },
+        { "name": "Express.js", "value": 80 },
+        { "name": "MongoDB", "value": 78 },
+        { "name": "Mongoose", "value": 78 }
       ]
     },
     {
-      "category": "Tools & Others",
+      "category": "AI & Integrations",
+      "accent": "purple",
+      "mode": "progress",
+      "items": [
+        { "name": "Grok AI API", "value": 85 },
+        { "name": "AI Email Writer", "value": 88 },
+        { "name": "Deal Scoring AI", "value": 82 },
+        { "name": "OpenAI / LLMs", "value": 80 }
+      ]
+    },
+    {
+      "category": "Tools & DevOps",
       "accent": "green",
-      "mode": "tags",
-      "items": ["Git", "GitHub", "Vercel", "Figma", "Postman", "Cypress", "Firebase", "Firestore", "DnD"]
+      "mode": "progress",
+      "items": [
+        { "name": "Git / GitHub", "value": 92 },
+        { "name": "Vercel", "value": 90 },
+        { "name": "Socket.io", "value": 82 },
+        { "name": "Stripe", "value": 80 }
+      ]
     }
   ],
   "projects": [

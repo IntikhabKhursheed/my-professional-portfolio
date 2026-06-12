@@ -42,6 +42,17 @@ function iconSvg(name) {
     desktop: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="5" width="16" height="11" stroke="currentColor" stroke-width="1.8"/><path d="M9 19h6M12 16v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg>',
     external: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 5h5v5M10 14 19 5M19 14v5H5V5h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="round"/></svg>',
     plus: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg>',
+    spark: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>',
+    layers: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m12 4 8 4-8 4-8-4 8-4Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m4 12 8 4 8-4M4 16l8 4 8-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="round"/></svg>',
+    code: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m9 8-4 4 4 4M15 8l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="round"/><path d="m13 7-2 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg>',
+    doc: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3h7l3 3v15H7V3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M14 3v4h3" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 11h6M9 15h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg>',
+    users: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M10 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM18 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4" stroke="currentColor" stroke-width="1.8"/><path d="M4 20c0-3 2.7-5 6-5s6 2 6 5M16 20c.2-1.5 1.2-2.7 3-3.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg>',
+    chip: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="7" y="7" width="10" height="10" stroke="currentColor" stroke-width="1.8"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg>',
+    palette: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18h2a2 2 0 0 0 0-4h-1a2 2 0 1 1 0-4h3a3 3 0 0 0 0-6h-4Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 9h0M7 13h0M10 6h0" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>',
+    trophy: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 4h8v3a4 4 0 0 1-8 0V4Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M6 7H4a2 2 0 0 0 2 4M18 7h2a2 2 0 0 1-2 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/><path d="M12 11v4M9 20h6M10 15h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg>',
+    globe: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"/></svg>',
+    link: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M10 14a4 4 0 0 1 0-6l2-2a4 4 0 0 1 6 6l-1 1" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/><path d="M14 10a4 4 0 0 1 0 6l-2 2a4 4 0 0 1-6-6l1-1" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg>',
+    sync: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13-6l1 1M20 12a8 8 0 0 1-13 6l-1-1" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/><path d="M15 4h3v3M9 20H6v-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg>',
   };
   return icons[name] || icons.external;
 }
@@ -58,7 +69,6 @@ function renderHero(data) {
   setText("heroSummary", data.summary || "");
   setText("heroStatusText", data.statusText || "");
   setText("availabilityLabel", data.availabilityLabel || "// AVAILABLE FOR HIRE");
-  setText("aboutText", data.about || "");
   setText("contactIntro", data.contactIntro || "");
   setText("currentYear", String(new Date().getFullYear()));
 
@@ -93,11 +103,91 @@ function renderHero(data) {
   });
 }
 
+function renderAbout(data) {
+  setText("aboutText", data.about || "");
+
+  const features = data.aboutFeatures || [
+    { icon: "brain", title: "Product-Oriented Thinking", description: "Building features that solve real problems for real users" },
+    { icon: "spark", title: "Professional UI/UX Focus", description: "Every pixel crafted with precision and user empathy" },
+    { icon: "layers", title: "Multi-Tenant SaaS Architecture", description: "Experienced in scalable, isolated tenant systems" },
+    { icon: "code", title: "AI Feature Integration", description: "Integrating Grok, LLMs, and AI APIs into production apps" },
+    { icon: "doc", title: "Strong Documentation", description: "Clear, professional documentation and presentation" },
+    { icon: "users", title: "Full-Stack Collaboration", description: "Frontend excellence with deep backend integration knowledge" },
+  ];
+
+  const featureGrid = document.getElementById("aboutFeatures");
+  featureGrid.innerHTML = "";
+  features.forEach((feature) => {
+    const card = createElement("article", "feature-card");
+    const icon = createElement("span", "feature-icon");
+    icon.innerHTML = iconSvg(feature.icon);
+    card.append(icon, createElement("h3", null, feature.title), createElement("p", null, feature.description));
+    featureGrid.append(card);
+  });
+
+  const stats = document.getElementById("aboutStats");
+  stats.innerHTML = "";
+  (data.aboutStats || [
+    { value: "10+", label: "Projects Built" },
+    { value: "5+", label: "Tech Stacks" },
+    { value: "AI", label: "Integrations" },
+  ]).forEach((stat) => {
+    const card = createElement("div", "about-stat");
+    card.append(createElement("strong", "about-stat-value", stat.value), createElement("span", "about-stat-label", stat.label));
+    stats.append(card);
+  });
+}
+
 function renderSkills(data) {
   const grid = document.getElementById("skillsGrid");
   grid.innerHTML = "";
 
-  (data.skills || []).forEach((group) => {
+  const groups = [
+    {
+      category: "Frontend",
+      accent: "cyan",
+      items: [
+        { name: "React", value: 95 },
+        { name: "Next.js", value: 90 },
+        { name: "Angular", value: 85 },
+        { name: "TypeScript", value: 88 },
+        { name: "Tailwind CSS", value: 95 },
+        { name: "JavaScript", value: 95 },
+      ],
+    },
+    {
+      category: "Backend",
+      accent: "cyan",
+      items: [
+        { name: "Node.js", value: 82 },
+        { name: "Express.js", value: 80 },
+        { name: "MongoDB", value: 78 },
+        { name: "Mongoose", value: 78 },
+      ],
+    },
+    {
+      category: "AI & Integrations",
+      accent: "purple",
+      items: [
+        { name: "Grok AI API", value: 85 },
+        { name: "AI Email Writer", value: 88 },
+        { name: "Deal Scoring AI", value: 82 },
+        { name: "OpenAI / LLMs", value: 80 },
+      ],
+    },
+    {
+      category: "Tools & DevOps",
+      accent: "green",
+      items: [
+        { name: "Git / GitHub", value: 92 },
+        { name: "Vercel", value: 90 },
+        { name: "Socket.io", value: 82 },
+        { name: "Stripe", value: 80 },
+      ],
+    },
+  ];
+
+  groups.forEach((group) => {
     const card = createElement("article", "skill-card");
     card.dataset.accent = group.accent || "cyan";
 
@@ -107,32 +197,57 @@ function renderSkills(data) {
     head.append(title, mark);
     card.append(head);
 
-    if (group.mode === "progress") {
-      const list = createElement("div", "skill-progress-list");
-      (group.items || []).forEach((item) => {
-        const row = createElement("div", "skill-row");
-        const rowHead = createElement("div", "skill-row-head");
-        rowHead.append(
-          createElement("span", "skill-row-name", item.name),
-          createElement("span", "skill-row-value", `${item.value}%`)
-        );
-        const meter = createElement("div", "skill-meter");
-        const bar = createElement("span");
-        bar.dataset.width = String(item.value || 0);
-        bar.style.setProperty("--skill-width", `${item.value || 0}%`);
-        meter.append(bar);
-        row.append(rowHead, meter);
-        list.append(row);
-      });
-      card.append(list);
-    } else {
-      const tags = createElement("div", "skill-tags");
-      (group.items || []).forEach((item) => {
-        tags.append(createElement("span", null, item));
-      });
-      card.append(tags);
-    }
+    const list = createElement("div", "skill-progress-list");
+    (group.items || []).forEach((item) => {
+      const row = createElement("div", "skill-row");
+      const rowHead = createElement("div", "skill-row-head");
+      rowHead.append(
+        createElement("span", "skill-row-name", item.name),
+        createElement("span", "skill-row-value", `${item.value}%`)
+      );
+      const meter = createElement("div", "skill-meter");
+      const bar = createElement("span");
+      bar.dataset.width = String(item.value || 0);
+      bar.style.setProperty("--skill-width", `${item.value || 0}%`);
+      meter.append(bar);
+      row.append(rowHead, meter);
+      list.append(row);
+    });
+    card.append(list);
 
+    grid.append(card);
+  });
+
+  const cloud = document.getElementById("skillsCloud");
+  if (cloud) {
+    cloud.innerHTML = "";
+    cloud.append(createElement("div", "section-label mono", "TECHNOLOGIES I WORK WITH"));
+    const tags = createElement("div", "skill-tags skills-cloud-tags");
+    ["React", "Angular", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "Node.js", "Express", "MongoDB", "Grok AI", "Stripe", "Socket.io", "Solidity", "Web3.js", "Git", "Vercel", "CI/CD", "REST APIs"].forEach((tag) => {
+      tags.append(createElement("span", null, tag));
+    });
+    cloud.append(tags);
+  }
+}
+
+function renderHighlights(data) {
+  const grid = document.getElementById("highlightsGrid");
+  if (!grid) return;
+  grid.innerHTML = "";
+  const highlights = data.highlights || [
+    { icon: "chip", title: "AI-Integrated SaaS Apps", description: "Built multi-tenant SaaS applications with Grok AI, email writing, deal scoring, and forecasting workflows." },
+    { icon: "palette", title: "Production-Ready UI/UX", description: "Designed responsive, portfolio-ready interfaces with accessible components and precise visual hierarchy." },
+    { icon: "trophy", title: "Modern Framework Mastery", description: "Expert in React, Angular, and Next.js ecosystems from architecture decisions to deployment." },
+    { icon: "globe", title: "Vercel Production Deployments", description: "Shipped full-stack apps with CI/CD pipelines and real production traffic on Vercel." },
+    { icon: "link", title: "Blockchain & Web3", description: "Developed decentralized applications with Solidity, Web3.js, and DEX trading interfaces." },
+    { icon: "sync", title: "Real-Time Applications", description: "Built collaborative products with Socket.io, live notifications, and real-time sync." },
+  ];
+
+  highlights.forEach((item) => {
+    const card = createElement("article", "highlight-card");
+    const icon = createElement("span", "highlight-icon");
+    icon.innerHTML = iconSvg(item.icon);
+    card.append(icon, createElement("h3", null, item.title), createElement("p", null, item.description));
     grid.append(card);
   });
 }
@@ -163,10 +278,26 @@ function labelForProjectLink(project, type) {
 }
 
 function renderProjects(data) {
-  const projects = (data.projects || []).slice().sort((a, b) => Number(b.featured) - Number(a.featured));
+  const fallbackProject = {
+    title: "Renadom Swap / Alvara Protocol",
+    subtitle: "Blockchain Token Swap DEX",
+    description: "A decentralized exchange (DEX) with AI-driven analytics, enabling token swaps on the blockchain with smart contract integration, real-time price feeds, and advanced trading analytics.",
+    category: "Web3",
+    icon: "link",
+    techTags: ["Solidity", "Web3.js", "React", "TypeScript", "Ethers.js"],
+    githubUrl: "",
+    featured: false,
+  };
+
+  const projects = [...(data.projects || [])];
+  if (!projects.some((project) => project.title === fallbackProject.title)) {
+    projects.push(fallbackProject);
+  }
+  projects.sort((a, b) => Number(b.featured) - Number(a.featured));
   setText("projectCountLabel", `${projects.length} Projects`);
 
-  const filters = ["All", ...new Set(projects.map((project) => project.category).filter(Boolean))];
+  const defaultFilters = ["All", "Full Stack", "AI", "Frontend", "Desktop", "Web3"];
+  const filters = defaultFilters.filter((filter) => filter === "All" || projects.some((project) => project.category === filter));
   const filterRow = document.getElementById("projectFilters");
   filterRow.innerHTML = "";
 
@@ -317,9 +448,10 @@ function renderContact(data) {
     }
     item.append(
       Object.assign(createElement("span", "contact-row-icon"), { innerHTML: contactIcon(row.icon) }),
-      createElement("div", null, "")
+      createElement("div", null, ""),
+      createElement("span", "contact-row-arrow", "→")
     );
-    const copy = item.lastElementChild;
+    const copy = item.children[1];
     copy.append(
       createElement("strong", "contact-row-label", row.label || ""),
       createElement("span", "contact-row-value", row.value || "")
@@ -408,7 +540,7 @@ function setupRevealObserver() {
 }
 
 function setupScrollSpy() {
-  const targets = ["skills", "projects", "experience", "contact"]
+  const targets = ["about", "skills", "projects", "highlights", "experience", "contact"]
     .map((id) => document.getElementById(id))
     .filter(Boolean);
   const links = Array.from(document.querySelectorAll("[data-nav-link]"));
@@ -421,7 +553,7 @@ function setupScrollSpy() {
   };
 
   if (!("IntersectionObserver" in window)) {
-    activate("skills");
+    activate("about");
     return;
   }
 
@@ -435,7 +567,7 @@ function setupScrollSpy() {
   }, { rootMargin: "-30% 0px -55% 0px", threshold: [0.2, 0.35, 0.5] });
 
   targets.forEach((node) => observer.observe(node));
-  activate("skills");
+  activate("about");
 }
 
 async function typeHeroRoles(roles) {
@@ -540,8 +672,10 @@ async function init() {
   state.data = data;
 
   renderHero(data);
+  renderAbout(data);
   renderSkills(data);
   renderProjects(data);
+  renderHighlights(data);
   renderExperience(data);
   renderContact(data);
   setupContactForm(data);
