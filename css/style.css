@@ -105,18 +105,21 @@ img {
 }
 
 .brand-mark {
-  display: inline-flex;
-  align-items: center;
-  gap: 0;
-  color: var(--text-muted);
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border-color);
+  color: var(--accent-cyan);
+  background: var(--bg-card);
+  border-radius: 0;
 }
 
-.brand-bracket,
-.brand-slash {
-  color: var(--text-muted);
+.brand-initials {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.12em;
 }
 
 .brand-copy {
@@ -555,6 +558,14 @@ a:focus-visible,
 .section-title em {
   font-style: normal;
   color: var(--accent-cyan);
+}
+
+.contact-title {
+  max-width: 12ch;
+}
+
+.contact-title span {
+  display: block;
 }
 
 .section-intro {
@@ -1231,6 +1242,14 @@ a:focus-visible,
   gap: 18px;
 }
 
+.contact-form-title {
+  margin: 0 0 24px;
+  color: var(--text-primary);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
 .contact-rows {
   display: grid;
   gap: 12px;
@@ -1242,6 +1261,7 @@ a:focus-visible,
   gap: 12px;
   align-items: center;
   padding: 14px 16px;
+  border-radius: 14px;
 }
 
 .contact-row:hover,
@@ -1252,17 +1272,48 @@ a:focus-visible,
 .contact-row-icon {
   width: 40px;
   height: 40px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
   border: 1px solid var(--border-color);
   color: var(--text-secondary);
   border-radius: 14px;
+  line-height: 0;
+}
+
+.contact-row[data-contact-type="email"] .contact-row-icon {
+  color: var(--accent-cyan);
+  background: rgba(34, 211, 238, 0.08);
+}
+
+.contact-row[data-contact-type="phone"] .contact-row-icon {
+  color: var(--accent-green);
+  background: rgba(52, 211, 153, 0.08);
+}
+
+.contact-row[data-contact-type="linkedin"] .contact-row-icon {
+  color: var(--accent-purple);
+  background: rgba(167, 139, 250, 0.08);
+}
+
+.contact-row[data-contact-type="github"] .contact-row-icon {
+  color: #f472b6;
+  background: rgba(244, 114, 182, 0.08);
+}
+
+.contact-row[data-contact-type="location"] .contact-row-icon {
+  color: var(--accent-orange);
+  background: rgba(251, 146, 60, 0.08);
+}
+
+.contact-row[data-contact-type="whatsapp"] .contact-row-icon {
+  color: var(--accent-green);
+  background: rgba(52, 211, 153, 0.08);
 }
 
 .contact-row-icon svg {
   width: 18px;
   height: 18px;
+  display: block;
 }
 
 .contact-row strong,
@@ -1335,9 +1386,17 @@ a:focus-visible,
   padding: 28px;
 }
 
+.contact-card .status-card {
+  margin-top: 22px;
+}
+
 .contact-form {
   display: grid;
   gap: 16px;
+}
+
+.contact-form-title {
+  margin-bottom: 22px;
 }
 
 .field-row {
@@ -1366,7 +1425,7 @@ a:focus-visible,
   background: var(--bg-surface-2);
   color: var(--text-primary);
   padding: 12px 14px;
-  border-radius: 18px;
+  border-radius: 16px;
   outline: none;
   transition: border-color 0.2s ease, outline-color 0.2s ease;
 }

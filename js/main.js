@@ -446,6 +446,7 @@ function renderContact(data) {
         item.rel = "noopener";
       }
     }
+    item.dataset.contactType = row.icon || row.label?.toLowerCase() || "default";
     item.append(
       Object.assign(createElement("span", "contact-row-icon"), { innerHTML: contactIcon(row.icon) }),
       createElement("div", null, ""),
@@ -473,6 +474,7 @@ function renderContact(data) {
       return copy;
     })()
   );
+  status.style.marginTop = "6px";
 }
 
 function setupContactForm(data) {
