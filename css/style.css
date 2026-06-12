@@ -447,8 +447,53 @@ a:focus-visible,
 
 .hero-side {
   align-self: stretch;
-  display: flex;
-  align-items: center;
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+
+.hero-portrait {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+}
+
+.hero-portrait-frame {
+  width: min(100%, 420px);
+  aspect-ratio: 1 / 1;
+  padding: 14px;
+  border: 1px solid var(--border-color);
+  background:
+    radial-gradient(circle at top, rgba(34, 211, 238, 0.18), transparent 56%),
+    linear-gradient(180deg, rgba(17, 22, 31, 0.98), rgba(15, 20, 28, 0.95));
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.34);
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-portrait-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.12), transparent 40%, rgba(167, 139, 250, 0.1));
+  pointer-events: none;
+}
+
+.hero-portrait-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  background: #05070a;
+}
+
+.hero-portrait-caption {
+  color: var(--text-muted);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .hero-terminal {
@@ -460,7 +505,7 @@ a:focus-visible,
   gap: 18px;
 }
 
-.terminal-line {
+/* .terminal-line {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -477,7 +522,7 @@ a:focus-visible,
 .terminal-value {
   color: var(--text-secondary);
   font-size: 15px;
-}
+} */
 
 .hero-stats-shell {
   margin-top: 48px;
@@ -1658,6 +1703,10 @@ main {
 
   .hero-shell {
     gap: 32px;
+  }
+
+  .hero-portrait-frame {
+    width: min(100%, 360px);
   }
 
   .hero-name {

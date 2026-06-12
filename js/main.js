@@ -78,6 +78,11 @@ function renderHero(data) {
     resumeLink.setAttribute("download", "Intikhab_Resume.pdf");
   }
 
+  const heroPortrait = document.getElementById("heroPortrait");
+  if (heroPortrait && data.profileImage) {
+    heroPortrait.src = fixPath(data.profileImage);
+  }
+
   const heroSocials = document.getElementById("heroSocials");
   heroSocials.innerHTML = "";
   (data.socials || []).forEach((social) => {
