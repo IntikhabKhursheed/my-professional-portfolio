@@ -3,437 +3,180 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Intikhab Khursheed | Full Stack JavaScript Developer</title>
-  <meta name="description" content="Portfolio of Intikhab Khursheed - Full Stack JavaScript Developer building modern web apps with React, Angular, Node.js, and MongoDB." />
-  <meta name="theme-color" content="#060816" />
+  <title>Intikhab Khursheed | Full Stack Developer</title>
+  <meta name="description" content="Portfolio of Intikhab Khursheed, a full stack developer building AI-powered web applications, scalable systems, and polished product experiences." />
+  <meta name="theme-color" content="#0a0e14" />
   <link rel="icon" href="assets/favicon.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/main.js"></script>
 </head>
 <body>
-  <div class="page-glow page-glow-left"></div>
-  <div class="page-glow page-glow-right"></div>
+  <div class="page-grid page-grid-left" aria-hidden="true"></div>
+  <div class="page-grid page-grid-right" aria-hidden="true"></div>
 
   <header class="site-header">
     <div class="container nav-shell">
       <a class="brand" href="#top" aria-label="Intikhab Khursheed home">
-        <span class="brand-mark"><img src="assets/images/logo.png" alt="" aria-hidden="true" /></span>
-        <span class="brand-copy">
-          <strong>INTIKHAB</strong>
-          <span>KHURSHEED</span>
+        <span class="brand-mark">
+          <span class="brand-bracket">&lt;</span>
+          <span class="brand-slash">/</span>
+          <span class="brand-bracket">&gt;</span>
         </span>
+        <span class="brand-copy">INTIKHAB.DEV</span>
       </a>
 
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+        <a href="#skills" data-nav-link>About</a>
+        <a href="#skills" data-nav-link>Skills</a>
+        <a href="#projects" data-nav-link>Projects</a>
+        <a href="#experience" data-nav-link>Experience</a>
+        <a href="#contact" data-nav-link>Contact</a>
       </nav>
 
-      <a class="btn btn-outline btn-small" href="https://www.linkedin.com/in/intikhab-khursheed-afridi-028a51285/" target="_blank" rel="noopener">Hire Me <span class="btn-icon">✦</span></a>
+      <div class="nav-actions">
+        <a class="btn btn-hire" href="https://www.linkedin.com/in/intikhab-khursheed-afridi-028a51285/" target="_blank" rel="noopener">Hire Me <span class="btn-icon">-&gt;</span></a>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
 
+  <div id="mobileMenu" class="mobile-menu" hidden>
+    <div class="mobile-menu-panel">
+      <button class="menu-close" type="button" aria-label="Close menu">Close</button>
+      <nav class="mobile-menu-links" aria-label="Mobile navigation">
+        <a href="#skills" data-nav-link>About</a>
+        <a href="#skills" data-nav-link>Skills</a>
+        <a href="#projects" data-nav-link>Projects</a>
+        <a href="#experience" data-nav-link>Experience</a>
+        <a href="#contact" data-nav-link>Contact</a>
+      </nav>
+      <a class="btn btn-hire btn-hire-mobile" href="https://www.linkedin.com/in/intikhab-khursheed-afridi-028a51285/" target="_blank" rel="noopener">Hire Me <span class="btn-icon">-&gt;</span></a>
+    </div>
+  </div>
+
   <main id="top">
-    <section class="hero section-pad">
-      <div class="container hero-grid">
+    <section class="hero section-pad reveal-section" id="hero">
+      <div class="container hero-shell">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-dot"></span> Hi, I&apos;m</p>
+          <p class="eyebrow mono" id="availabilityLabel">// AVAILABLE FOR HIRE</p>
           <h1 class="hero-name">
-            <span id="heroNameLine1">INTIKHAB</span>
-            <span id="heroNameLine2">KHURSHEED</span>
+            <span id="heroNameLine1">Intikhab</span>
+            <span id="heroNameLine2">Khursheed</span>
           </h1>
-          <h2 id="heroRole" class="hero-role">Full Stack Developer (React, Angular, Node.js, MongoDB, AI)</h2>
-          <p id="summary" class="hero-summary">I build scalable AI-powered web applications with modern technologies. Experienced in full-stack development, REST APIs, JWT authentication, and production deployment.</p>
+          <p class="hero-role mono" aria-live="polite">
+            <span class="hero-role-prefix">&gt;</span>
+            <span id="heroRoleText">Full Stack Developer</span>
+            <span class="hero-cursor" aria-hidden="true"></span>
+          </p>
+          <p class="hero-summary" id="heroSummary"></p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#projects">View My Work <span class="btn-icon">→</span></a>
-            <a id="resumeLink" class="btn btn-outline" href="assets/Intikhab_Resume.pdf" download="Intikhab_Resume.pdf">Download CV <span class="btn-icon">↓</span></a>
+            <a class="btn btn-primary" href="#projects">View My Work <span class="btn-icon">-&gt;</span></a>
+            <a class="btn btn-secondary" id="resumeLink" href="assets/Intikhab_Resume.pdf" download="Intikhab_Resume.pdf">Download CV <span class="btn-icon">&darr;</span></a>
           </div>
 
-          <div class="connect-block">
-            <span class="connect-label">Connect with me</span>
-            <div class="social-icons" id="heroSocials">
-              <a data-social="linkedin" href="https://www.linkedin.com/in/intikhab-khursheed-afridi-028a51285/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M5.98 3.5A2.48 2.48 0 1 1 6 8.46 2.48 2.48 0 0 1 5.98 3.5ZM4.5 9h3v11h-3V9Zm5.5 0h2.88v1.5h.04A3.16 3.16 0 0 1 15.76 9c3.18 0 3.74 2.09 3.74 4.8V20h-3v-5.36c0-1.28-.02-2.93-1.79-2.93-1.8 0-2.08 1.4-2.08 2.83V20h-3V9Z"/></svg>
-              </a>
-              <a data-social="github" href="https://github.com/IntikhabKhursheed" target="_blank" rel="noopener" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.67c-2.77.6-3.35-1.18-3.35-1.18-.45-1.14-1.11-1.45-1.11-1.45-.91-.63.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.37 1.09 2.95.83.09-.66.35-1.09.63-1.34-2.21-.25-4.54-1.1-4.54-4.92 0-1.09.39-1.99 1.03-2.69-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.03a9.52 9.52 0 0 1 5 0c1.9-1.3 2.74-1.03 2.74-1.03.56 1.41.21 2.45.11 2.71.64.7 1.02 1.6 1.02 2.69 0 3.83-2.33 4.67-4.55 4.92.36.31.67.92.67 1.86v2.75c0 .26.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
-              </a>
-              <a data-social="email" href="mailto:intikhabkhursheed@gmail.com" aria-label="Email">
-                <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm0 3.2V18h16V7.2l-8 5.2-8-5.2Zm8 3.1 8-5.2H4l8 5.2Z"/></svg>
-              </a>
-              <a data-social="whatsapp" href="https://wa.me/923359919883" target="_blank" rel="noopener" aria-label="WhatsApp">
-                <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.57 15.17L2 22l4.98-1.3A10 10 0 1 0 12 2Zm5.9 14.1c-.24.68-1.2 1.26-1.66 1.33-.42.07-.97.1-1.57-.09-.36-.11-.82-.27-1.42-.53-2.5-1.08-4.13-3.58-4.25-3.75-.11-.16-1-.87-1-1.66 0-.8.42-1.18.57-1.34.15-.16.33-.2.44-.2h.32c.1 0 .23-.04.36.28.13.32.45 1.11.5 1.19.04.09.08.2.01.33-.07.13-.1.21-.2.32-.1.11-.22.25-.32.34-.1.1-.2.21-.08.42.12.2.52.85 1.12 1.38.77.69 1.42.91 1.62 1.01.2.1.32.08.44-.05.13-.13.56-.66.71-.89.14-.23.29-.19.49-.11.2.09 1.28.6 1.5.71.22.11.38.16.44.25.06.09.06.53-.18 1.21Z"/></svg>
-              </a>
+          <div class="social-row" id="heroSocials" aria-label="Social links"></div>
+        </div>
+
+        <div class="hero-side">
+          <div class="hero-terminal">
+            <div class="terminal-line">
+              <span class="terminal-key mono">status</span>
+              <span class="terminal-value" id="heroStatusText">Building scalable products</span>
+            </div>
+            <div class="terminal-line">
+              <span class="terminal-key mono">focus</span>
+              <span class="terminal-value">AI, SaaS, Healthcare, Real Estate</span>
+            </div>
+            <div class="terminal-line">
+              <span class="terminal-key mono">stack</span>
+              <span class="terminal-value">React, Angular, Node.js, MongoDB</span>
             </div>
           </div>
         </div>
-
-        <div class="hero-visual">
-          <div class="hero-orb hero-orb-main"></div>
-          <div class="hero-orb hero-orb-soft"></div>
-          <div class="hero-grid-lines"></div>
-
-          <div class="floating-chip chip-react">React</div>
-          <div class="floating-chip chip-node">Node.js</div>
-          <div class="floating-chip chip-js">JS</div>
-          <div class="floating-chip chip-tailwind">Tailwind</div>
-
-          <img id="headshot" class="hero-portrait" src="assets/images/profile-cutout.png" alt="Portrait of Intikhab Khursheed" loading="eager" />
-        </div>
       </div>
 
-      <div class="container trust-shell">
-        <div class="trust-label">Trusted Technologies</div>
-        <div id="trustedTechRow" class="trust-row">
-          <div class="trust-pill"><span class="trust-dot"></span><span>React</span></div>
-          <div class="trust-pill"><span class="trust-dot"></span><span>Angular</span></div>
-          <div class="trust-pill"><span class="trust-dot"></span><span>Node.js</span></div>
-          <div class="trust-pill"><span class="trust-dot"></span><span>MongoDB</span></div>
-          <div class="trust-pill"><span class="trust-dot"></span><span>TypeScript</span></div>
-          <div class="trust-pill"><span class="trust-dot"></span><span>Tailwind CSS</span></div>
-          <div class="trust-pill"><span class="trust-dot"></span><span>AWS</span></div>
-          <div class="trust-pill"><span class="trust-dot"></span><span>Docker</span></div>
-        </div>
+      <div class="container hero-stats-shell">
+        <div id="heroStats" class="hero-stats"></div>
       </div>
+
+      <a class="hero-scroll" href="#skills" aria-label="Scroll to next section">
+        <span></span>
+      </a>
     </section>
 
-    <section id="about" class="section-pad section-divider">
-      <div class="container about-grid">
-        <div class="section-copy">
-          <p class="section-kicker"><span class="kicker-dot"></span> About Me</p>
-          <h2>Passionate about Building Solutions</h2>
-          <p id="aboutText" class="section-body"></p>
-
-          <div id="aboutStats" class="stat-row">
-            <div class="stat-card"><strong class="stat-value">2+</strong><span class="stat-label">Years Experience</span></div>
-            <div class="stat-card"><strong class="stat-value">15+</strong><span class="stat-label">Projects Completed</span></div>
-            <div class="stat-card"><strong class="stat-value">100%</strong><span class="stat-label">Client Satisfaction</span></div>
-            <div class="stat-card"><strong class="stat-value">24/7</strong><span class="stat-label">Support Mindset</span></div>
-          </div>
-
-          <div class="section-actions">
-            <a href="#contact" class="btn btn-outline mt-2">Learn More About Me <span class="btn-icon">↗</span></a>
-          </div>
-        </div>
-
-        <div class="about-visual">
-          <div class="showcase-card">
-            <div class="showcase-screen">
-              <div class="showcase-toolbar">
-                <span></span><span></span><span></span>
-              </div>
-              <img id="aboutImage" src="assets/images/Roome_v2.png" alt="Roome project" loading="lazy" />
-            </div>
-            <div class="showcase-footer">
-              <div>
-                <strong>Modern UI</strong>
-                <span>Dark, elegant, and responsive</span>
-              </div>
-              <div class="mini-chip">Tailwind-ready</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section-pad">
+    <section id="skills" class="section-pad reveal-section">
       <div class="container section-head">
         <div>
-          <p class="section-kicker"><span class="kicker-dot"></span> Featured Projects</p>
-          <h2>Some Things I've Built</h2>
+          <p class="eyebrow mono">// 02. EXPERTISE</p>
+          <h2 class="section-title"><span>Skills &amp;</span> <em>Stack</em></h2>
         </div>
-        <div class="section-head-actions">
-          <button class="icon-btn" id="projectPrev" type="button" aria-label="Scroll projects left">‹</button>
-          <button class="icon-btn" id="projectNext" type="button" aria-label="Scroll projects right">›</button>
-        </div>
+      </div>
+
+      <div class="container section-intro">
+        <p id="aboutText" class="section-body"></p>
       </div>
 
       <div class="container">
-        <div id="projectsGrid" class="project-track" aria-live="polite">
-          <article class="project-card">
-            <div class="project-body">
-              <div class="project-media">
-                <div class="project-surface">
-                  <img src="assets/images/Careos.png" alt="CareOS dashboard preview" class="project-thumb" loading="lazy" />
-                </div>
-              </div>
-              <h4 class="project-title">CareOS</h4>
-              <p class="project-subtitle">AI Hospital Management System</p>
-              <p class="project-description">Deployed a production-ready hospital management system with Grok AI for clinical notes, drug interaction checks, real-time alerts with Socket.io, and role-based access for 8 user types.</p>
-              <div class="chip-row">
-                <span>React</span><span>Angular</span><span>Node.js</span><span>MongoDB</span><span>Tailwind CSS</span><span>AWS</span><span>Docker</span>
-              </div>
-              <div class="actions-row">
-                <a class="btn btn-primary" href="https://careos-hospital-client.vercel.app/login" target="_blank" rel="noopener">Live Demo</a>
-                <a class="btn btn-outline" href="https://github.com/IntikhabKhursheed" target="_blank" rel="noopener">GitHub Repo</a>
-              </div>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-body">
-              <div class="project-media">
-                <div class="project-surface">
-                  <img src="assets/images/placeholder.svg" alt="NexusCRM preview" class="project-thumb" loading="lazy" />
-                </div>
-              </div>
-              <h4 class="project-title">NexusCRM</h4>
-              <p class="project-subtitle">AI-Powered Sales Intelligence Platform</p>
-              <p class="project-description">A multi-tenant CRM for small and mid-sized businesses with AI deal scoring, revenue forecasting, personalized outreach, and subscription-ready SaaS architecture.</p>
-              <div class="chip-row">
-                <span>Next.js</span><span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Tailwind CSS</span><span>Socket.io</span><span>Stripe</span>
-              </div>
-              <div class="actions-row"><a class="btn btn-outline" href="https://github.com/IntikhabKhursheed/nexus-crm" target="_blank" rel="noopener">GitHub Repo</a></div>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-body">
-              <div class="project-media">
-                <div class="project-surface">
-                  <img src="assets/images/NexusAI.svg" alt="Nexus AI dashboard preview" class="project-thumb" loading="lazy" />
-                </div>
-              </div>
-              <h4 class="project-title">Nexus AI</h4>
-              <p class="project-subtitle">AI Project Planning Platform</p>
-              <p class="project-description">Task breakdowns using Grok AI and intelligent workflow management. Built interactive dashboards for planning, progress tracking, and collaboration.</p>
-              <div class="chip-row">
-                <span>React</span><span>Node.js</span><span>MongoDB</span><span>Tailwind CSS</span><span>Docker</span>
-              </div>
-              <div class="actions-row">
-                <a class="btn btn-primary" href="https://nexus-ai-vertax.vercel.app/login" target="_blank" rel="noopener">Live Demo</a>
-                <a class="btn btn-outline" href="https://github.com/IntikhabKhursheed" target="_blank" rel="noopener">GitHub Repo</a>
-              </div>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-body">
-              <div class="project-media">
-                <div class="project-surface">
-                  <img src="assets/images/Estate.png" alt="EstateIQ dashboard preview" class="project-thumb" loading="lazy" />
-                </div>
-              </div>
-              <h4 class="project-title">EstateIQ</h4>
-              <p class="project-subtitle">AI Real Estate Platform</p>
-              <p class="project-description">Property listing, valuation, and AI-powered investment scoring with natural language search and Gemini-driven property intelligence across Pakistan and the Middle East.</p>
-              <div class="chip-row">
-                <span>Angular</span><span>Node.js</span><span>MongoDB</span><span>Gemini AI</span><span>Tailwind CSS</span>
-              </div>
-              <div class="actions-row">
-                <a class="btn btn-primary" href="https://real-estate-app-client-amber.vercel.app/" target="_blank" rel="noopener">Live Demo</a>
-                <a class="btn btn-outline" href="https://github.com/IntikhabKhursheed" target="_blank" rel="noopener">GitHub Repo</a>
-              </div>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-body">
-              <div class="project-media">
-                <div class="project-surface">
-                  <img src="assets/images/CampaignForge.svg" alt="CampaignForge dashboard preview" class="project-thumb" loading="lazy" />
-                </div>
-              </div>
-              <h4 class="project-title">CampaignForge</h4>
-              <p class="project-subtitle">Campaign Management Platform</p>
-              <p class="project-description">A modern campaign management platform with protected routes, dashboards, task assignment, analytics, and secure session-based authentication.</p>
-              <div class="chip-row">
-                <span>React</span><span>TypeScript</span><span>Vite</span><span>TanStack Query</span><span>Tailwind CSS</span><span>Node.js</span><span>MongoDB</span>
-              </div>
-              <div class="actions-row"><a class="btn btn-primary" href="https://github.com/IntikhabKhursheed/CampaignForge" target="_blank" rel="noopener">GitHub Repo</a></div>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-body">
-              <div class="project-media">
-                <div class="project-surface">
-                  <img src="assets/images/TaskFlow.svg" alt="TaskFlow kanban preview" class="project-thumb" loading="lazy" />
-                </div>
-              </div>
-              <h4 class="project-title">TaskFlow</h4>
-              <p class="project-subtitle">Smart Task Manager</p>
-              <p class="project-description">A modern task management app with Kanban board, task list, real-time Firebase sync, drag-and-drop, search, and advanced filters.</p>
-              <div class="chip-row">
-                <span>React</span><span>TypeScript</span><span>Ant Design</span><span>Firebase</span><span>Firestore</span><span>DnD</span>
-              </div>
-              <div class="actions-row"><a class="btn btn-primary" href="https://github.com/IntikhabKhursheed/TaskFlow-SmartTaskManager" target="_blank" rel="noopener">Project Page</a><a class="btn btn-outline" href="https://github.com/IntikhabKhursheed/TaskFlow-SmartTaskManager" target="_blank" rel="noopener">GitHub Repo</a></div>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-body">
-              <div class="project-media">
-                <div class="project-surface">
-                  <img src="assets/images/InvoiceDashboard.svg" alt="Invoice Dashboard preview" class="project-thumb" loading="lazy" />
-                </div>
-              </div>
-              <h4 class="project-title">Invoice Dashboard</h4>
-              <p class="project-subtitle">Billing & Tracking System</p>
-              <p class="project-description">Full-stack invoice management platform for freelancers and small businesses to create, manage, and track invoices with a responsive dashboard.</p>
-              <div class="chip-row">
-                <span>Next.js</span><span>React</span><span>Tailwind CSS</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Vercel</span>
-              </div>
-              <div class="actions-row"><a class="btn btn-primary" href="https://github.com/IntikhabKhursheed/StreamlineInvoice" target="_blank" rel="noopener">Project Page</a><a class="btn btn-outline" href="https://github.com/IntikhabKhursheed/StreamlineInvoice" target="_blank" rel="noopener">GitHub Repo</a></div>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-body">
-              <div class="project-media">
-                <div class="project-surface">
-                  <img src="assets/images/DHQHospital.svg" alt="DHQ Hospital desktop preview" class="project-thumb" loading="lazy" />
-                </div>
-              </div>
-              <h4 class="project-title">DHQ Hospital</h4>
-              <p class="project-subtitle">Desktop Management System</p>
-              <p class="project-description">Offline-first desktop application for patient management, appointment scheduling, and medical records with Windows and macOS compatibility.</p>
-              <div class="chip-row">
-                <span>Electron.js</span><span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>Node.js</span>
-              </div>
-              <div class="actions-row"><a class="btn btn-primary" href="https://github.com/IntikhabKhursheed" target="_blank" rel="noopener">Project Page</a><a class="btn btn-outline" href="https://github.com/IntikhabKhursheed" target="_blank" rel="noopener">GitHub Repo</a></div>
-            </div>
-          </article>
-        </div>
+        <div id="skillsGrid" class="skills-grid"></div>
       </div>
     </section>
 
-    <section id="skills" class="section-pad section-divider">
-      <div class="container section-head">
+    <section id="projects" class="section-pad reveal-section">
+      <div class="container section-head section-head-between">
         <div>
-          <p class="section-kicker"><span class="kicker-dot"></span> My Skills</p>
-          <h2>Tech Stack & Tools</h2>
+          <p class="eyebrow mono">// 03. WORK</p>
+          <h2 class="section-title"><span id="projectCountLabel">8 Projects</span> <em>Delivered</em></h2>
         </div>
+        <div id="projectFilters" class="filter-row" aria-label="Project filters"></div>
       </div>
 
       <div class="container">
-        <div id="skillsGrid" class="skills-grid">
-          <article class="skill-card">
-            <div class="skill-head"><h3>Frontend</h3><div class="skill-icon">F</div></div>
-            <div class="skill-list"><span>React</span><span>Angular</span><span>TypeScript</span><span>Tailwind CSS</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Next.js</span><span>Vite</span></div>
-          </article>
-          <article class="skill-card">
-            <div class="skill-head"><h3>Backend</h3><div class="skill-icon">B</div></div>
-            <div class="skill-list"><span>Node.js</span><span>Express</span><span>MongoDB</span><span>REST APIs</span><span>JWT authentication</span><span>Docker</span><span>AWS</span></div>
-          </article>
-          <article class="skill-card">
-            <div class="skill-head"><h3>Tools & Others</h3><div class="skill-icon">T</div></div>
-            <div class="skill-list"><span>Git</span><span>GitHub</span><span>VS Code</span><span>Figma</span><span>Postman</span><span>Cypress</span></div>
-          </article>
-        </div>
+        <div id="projectsGrid" class="projects-grid"></div>
       </div>
     </section>
 
-    <section id="experience" class="section-pad">
-        <div class="container section-head">
+    <section id="experience" class="section-pad reveal-section">
+      <div class="container section-head">
         <div>
-          <p class="section-kicker"><span class="kicker-dot"></span> Experience</p>
-          <h2>My Professional Journey</h2>
+          <p class="eyebrow mono">// 04. JOURNEY</p>
+          <h2 class="section-title"><span>Experience &amp;</span> <em>Growth</em></h2>
         </div>
-        <div class="impact-pill">Building reliable products since 2023</div>
       </div>
 
       <div class="container experience-grid">
-        <div class="timeline-card">
-          <div id="experienceList" class="timeline">
-            <article class="timeline-item">
-              <div class="timeline-meta"><span>Aug 2025 - Present</span><span>Peshawar, Pakistan</span></div>
-              <h3>Full Stack Developer</h3>
-              <div class="timeline-meta">Codnocrats Innovating Solutions</div>
-              <ul>
-                <li>Building EstateIQ, an AI-driven real estate platform.</li>
-                <li>Leading full-stack development and production deployment.</li>
-              </ul>
-            </article>
-            <article class="timeline-item">
-              <div class="timeline-meta"><span>Sep 2024 - Aug 2025</span><span>Islamabad, Pakistan</span></div>
-              <h3>Frontend Developer (MERN Stack)</h3>
-              <div class="timeline-meta">Troon Technologies</div>
-              <ul>
-                <li>Developed healthcare app frontend using Angular.</li>
-                <li>Implemented dashboards, API integrations, and real-time features.</li>
-              </ul>
-            </article>
-            <article class="timeline-item">
-              <div class="timeline-meta"><span>Jul 2023 - Aug 2024</span><span>Peshawar, Pakistan</span></div>
-              <h3>Frontend Developer</h3>
-              <div class="timeline-meta">Codnocrats Innovating Solutions</div>
-              <ul>
-                <li>Worked on CareOS, Nexus AI, and other SaaS apps.</li>
-                <li>Handled AI integration, role-based access, and performance optimization.</li>
-              </ul>
-            </article>
-          </div>
+        <div class="timeline-column">
+          <div id="experienceTimeline" class="timeline"></div>
         </div>
-        <div class="impact-grid">
-          <div class="impact-card">
-            <span class="impact-value" id="impactProjects">15+</span>
-            <span class="impact-label">Projects Delivered</span>
-          </div>
-          <div class="impact-card">
-            <span class="impact-value" id="impactYears">2+</span>
-            <span class="impact-label">Years Experience</span>
-          </div>
-          <div class="impact-card">
-            <span class="impact-value" id="impactTech">30+</span>
-            <span class="impact-label">Technologies Used</span>
-          </div>
-          <div class="impact-card">
-            <span class="impact-value" id="impactDomains">4+</span>
-            <span class="impact-label">Problem Domains</span>
-          </div>
-        </div>
+
+        <aside class="experience-side">
+          <p class="section-label mono">AT A GLANCE</p>
+          <div id="experienceStats" class="aside-stats"></div>
+          <div id="feedbackCard" class="feedback-card"></div>
+        </aside>
       </div>
     </section>
 
-    <section id="testimonials" class="section-pad section-divider">
+    <section id="contact" class="section-pad reveal-section">
       <div class="container section-head">
         <div>
-          <p class="section-kicker"><span class="kicker-dot"></span> Testimonials</p>
-          <h2>Client Feedback</h2>
+          <p class="eyebrow mono">// 05. CONTACT</p>
+          <h2 class="section-title"><span>Let's Build</span> <em>Together</em></h2>
         </div>
       </div>
-      <div class="container testimonial-card">
-        <div class="testimonial-quote">
-          <span class="quote-mark">“</span>
-          <p>Intikhab is a dependable full stack developer who delivers high-quality work, communicates clearly, and understands modern product requirements.</p>
-        </div>
-        <div class="testimonial-author">
-          <div class="avatar-badge">IK</div>
-          <div>
-            <strong>Client from CareOS Project</strong><br>
-            <span>Healthcare Industry</span>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section id="contact" class="section-pad section-divider">
       <div class="container contact-grid">
-        <div class="section-copy">
-          <p class="section-kicker"><span class="kicker-dot"></span> Get In Touch</p>
-          <h2>Let&apos;s Build Something Amazing Together</h2>
-          <p class="section-body">
-            Ready to start your next project? Let&apos;s discuss how we can turn ideas into a polished product with a strong user experience.
-          </p>
-
-            <div class="contact-meta">
-              <div>
-                <span>Email</span>
-                <strong id="contactEmailText">intikhabkhursheed@gmail.com</strong>
-              </div>
-              <div>
-                <span>Phone</span>
-                <strong id="contactPhoneText">+92 335 9919883</strong>
-              </div>
-              <div>
-                <span>Location</span>
-                <strong id="contactLocationText">Peshawar, Pakistan</strong>
-              </div>
-            </div>
-
-          <div class="section-actions">
-            <a id="emailLink" class="btn btn-primary" href="#">Start a Project <span class="btn-icon">✈</span></a>
-          </div>
+        <div class="contact-copy">
+          <p id="contactIntro" class="section-body"></p>
+          <div id="contactRows" class="contact-rows"></div>
+          <div id="statusCard" class="status-card"></div>
         </div>
 
         <div class="contact-card">
@@ -447,6 +190,7 @@
           >
             <input type="hidden" name="form-name" value="portfolio-contact" />
             <input type="hidden" name="bot-field" />
+
             <div class="field-row">
               <label>
                 <span>Name</span>
@@ -457,11 +201,13 @@
                 <input name="email" type="email" placeholder="you@example.com" required />
               </label>
             </div>
+
             <label>
               <span>Message</span>
-              <textarea name="message" rows="6" placeholder="Tell me about your project..." required></textarea>
+              <textarea name="message" rows="7" placeholder="Tell me about your project..." required></textarea>
             </label>
-            <button class="btn btn-primary btn-block" type="submit">Send Message <span class="btn-icon">→</span></button>
+
+            <button class="btn btn-primary btn-block" type="submit">Send Message <span class="btn-icon">-&gt;</span></button>
             <p id="contactStatus" class="form-status" aria-live="polite"></p>
           </form>
         </div>
@@ -471,72 +217,227 @@
 
   <footer class="site-footer">
     <div class="container footer-shell">
-      <div>
-        <strong id="footerName">Intikhab Khursheed</strong>
-        <p>Building thoughtful interfaces with modern web technologies.</p>
+      <div class="footer-brand mono">&lt;/&gt;</div>
+      <div class="footer-copy">
+        <span>Built with HTML + CSS + JavaScript</span>
+        <span>&copy; <span id="currentYear"></span></span>
       </div>
       <div class="footer-links">
         <a href="#top">Back to Top</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </div>
-      <div class="footer-copy">
-        <span>© <span id="year"></span> Intikhab Khursheed</span>
-        <span>Built with React-inspired design and CSS.</span>
-      </div>
     </div>
   </footer>
-
   <script>
     window.PORTFOLIO_DATA = {
-      "name": "INTIKHAB KHURSHEED",
-      "display_name": "Intikhab Khursheed",
-      "name_parts": ["INTIKHAB", "KHURSHEED"],
-      "role": "Full Stack Developer (React, Angular, Node.js, MongoDB, AI)",
-      "yearsExperience": "2+",
-      "projectCount": 15,
-      "techCount": 30,
-      "domainCount": 4,
-      "domainHints": ["Healthcare", "SaaS", "Real Estate", "Productivity"],
+      "name": "Intikhab Khursheed",
+      "displayName": "Intikhab Khursheed",
+      "nameParts": ["Intikhab", "Khursheed"],
+      "availabilityLabel": "// AVAILABLE FOR HIRE",
+      "heroRoles": [
+        "Full Stack JavaScript Developer",
+        "React \u00b7 Angular \u00b7 Node.js \u00b7 MongoDB",
+        "AI-Powered App Builder"
+      ],
       "summary": "I build scalable AI-powered web applications with modern technologies. Experienced in full-stack development, REST APIs, JWT authentication, and production deployment.",
-      "about": "Passionate about building scalable, AI-powered web applications that solve real problems. I have 2+ years building production-grade solutions across healthcare, SaaS, and real estate domains.",
+      "statusText": "Building scalable products",
+      "about": "Passionate about building solutions that combine strong user experience with reliable engineering. I have spent 2+ years shipping production-grade applications across healthcare, SaaS, real estate, and productivity domains.",
+      "contactIntro": "Ready to start your next project? Let's discuss how we can turn ideas into a polished product with a strong user experience.",
       "location": "Peshawar, Pakistan",
       "email": "intikhabkhursheed@gmail.com",
       "phone": "+92 335 9919883",
-      "resume_url": "assets/Intikhab_Resume.pdf",
-      "headshot": "assets/images/profile-cutout.png",
-      "about_image": "assets/images/Roome_v2.png",
-      "trustedTechnologies": ["React", "Angular", "Node.js", "MongoDB", "TypeScript", "Tailwind CSS", "AWS", "Docker"],
-      "aboutStats": [
-        { "value": "2+", "label": "Years Experience" },
-        { "value": "15+", "label": "Projects Completed" },
-        { "value": "100%", "label": "Client Satisfaction" },
-        { "value": "24/7", "label": "Support" }
-      ],
-      "skills": [
-        { "category": "Frontend", "items": ["React", "Angular", "TypeScript", "Tailwind CSS", "HTML", "CSS", "JavaScript", "Next.js", "Vite"] },
-        { "category": "Backend", "items": ["Node.js", "Express", "MongoDB", "REST APIs", "JWT authentication", "Docker", "AWS"] },
-        { "category": "Tools & Others", "items": ["Git", "GitHub", "VS Code", "Figma", "Postman", "Cypress"] }
-      ],
+      "resumeUrl": "assets/Intikhab_Resume.pdf",
       "socials": [
         { "label": "LinkedIn", "url": "https://www.linkedin.com/in/intikhab-khursheed-afridi-028a51285/" },
         { "label": "GitHub", "url": "https://github.com/IntikhabKhursheed" },
         { "label": "Email", "url": "mailto:intikhabkhursheed@gmail.com" },
         { "label": "WhatsApp", "url": "https://wa.me/923359919883" }
       ],
+      "heroStats": [
+        { "number": "2+", "label": "Years Experience" },
+        { "number": "15+", "label": "Projects Completed" },
+        { "number": "100%", "label": "Client Satisfaction" },
+        { "number": "24/7", "label": "Support Mindset" }
+      ],
+      "skills": [
+        {
+          "category": "Frontend",
+          "accent": "cyan",
+          "mode": "progress",
+          "items": [
+            { "name": "React / Next.js", "value": 95 },
+            { "name": "Angular", "value": 85 },
+            { "name": "TypeScript", "value": 90 },
+            { "name": "Tailwind CSS", "value": 92 }
+          ]
+        },
+        {
+          "category": "Backend",
+          "accent": "purple",
+          "mode": "progress",
+          "items": [
+            { "name": "Node.js / Express", "value": 93 },
+            { "name": "MongoDB", "value": 88 },
+            { "name": "REST APIs / JWT", "value": 90 },
+            { "name": "Docker / AWS", "value": 78 }
+          ]
+        },
+        {
+          "category": "Tools & Others",
+          "accent": "green",
+          "mode": "tags",
+          "items": ["Git", "GitHub", "Vercel", "Figma", "Postman", "Cypress", "Firebase", "Firestore", "DnD"]
+        }
+      ],
       "projects": [
-        { "title": "CareOS", "subtitle": "AI Hospital Management System", "description": "Deployed a production-ready hospital management system with Grok AI for clinical notes and drug interaction checks, real-time alerts with Socket.io, and role-based access for 8 user types.", "tech": ["React", "Angular", "Node.js", "MongoDB", "Tailwind CSS", "AWS", "Docker"], "live": "", "repo": "https://github.com/IntikhabKhursheed" },
-        { "title": "NexusCRM", "subtitle": "AI-Powered Sales Intelligence Platform", "description": "A multi-tenant CRM for small and mid-sized businesses with AI deal scoring, revenue forecasting, personalized outreach, and subscription-ready SaaS architecture.", "tech": ["Next.js", "React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Socket.io", "Stripe"], "live": "", "repo": "https://github.com/IntikhabKhursheed/nexus-crm" },
-        { "title": "Nexus AI", "subtitle": "AI Project Planning Platform", "description": "Task breakdowns using Grok AI and intelligent workflow management. Built interactive dashboards for project planning.", "tech": ["React", "Node.js", "MongoDB", "Tailwind CSS", "Docker"], "live": "", "repo": "https://github.com/IntikhabKhursheed" },
-        { "title": "EstateIQ", "subtitle": "AI Real Estate Platform", "description": "Property listing, valuation, and AI-powered investment scoring with natural language property search and Gemini-driven valuation.", "tech": ["Angular", "Node.js", "MongoDB", "Gemini AI", "Tailwind CSS"], "live": "", "repo": "https://github.com/IntikhabKhursheed" }
+        {
+          "title": "CareOS",
+          "subtitle": "AI Hospital Management System",
+          "description": "Production-ready hospital management system with Grok AI for clinical notes, drug interaction checks, real-time alerts with Socket.io, and role-based access for 8 user types.",
+          "category": "AI",
+          "icon": "hospital",
+          "techTags": ["React", "Angular", "Node.js", "MongoDB", "Tailwind CSS", "AWS", "Docker", "Socket.io", "JWT"],
+          "liveUrl": "https://careos-hospital-client.vercel.app/login",
+          "githubUrl": "https://github.com/IntikhabKhursheed",
+          "featured": true
+        },
+        {
+          "title": "NexusCRM",
+          "subtitle": "AI-Powered Sales Intelligence Platform",
+          "description": "A multi-tenant CRM for small and mid-sized businesses with AI deal scoring, revenue forecasting, personalized outreach, and subscription-ready SaaS architecture.",
+          "category": "Full Stack",
+          "icon": "crm",
+          "techTags": ["Next.js", "React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Socket.io", "Stripe", "TypeScript"],
+          "githubUrl": "https://github.com/IntikhabKhursheed/nexus-crm",
+          "featured": false
+        },
+        {
+          "title": "Nexus AI",
+          "subtitle": "AI Project Planning Platform",
+          "description": "AI-powered task breakdowns and intelligent workflow management with interactive planning dashboards for teams and solo builders.",
+          "category": "AI",
+          "icon": "brain",
+          "techTags": ["React", "Node.js", "MongoDB", "Tailwind CSS", "Docker", "Gemini AI", "TypeScript"],
+          "liveUrl": "https://nexus-ai-vertax.vercel.app/login",
+          "githubUrl": "https://github.com/IntikhabKhursheed",
+          "featured": false
+        },
+        {
+          "title": "EstateIQ",
+          "subtitle": "AI Real Estate Platform",
+          "description": "Property listing, valuation, and AI-powered investment scoring with natural language search and Gemini-driven property intelligence across Pakistan and the Middle East.",
+          "category": "AI",
+          "icon": "building",
+          "techTags": ["Angular", "Node.js", "MongoDB", "Gemini AI", "Tailwind CSS", "REST APIs", "JWT"],
+          "liveUrl": "https://real-estate-app-client-amber.vercel.app/",
+          "githubUrl": "https://github.com/IntikhabKhursheed",
+          "featured": false
+        },
+        {
+          "title": "CampaignForge",
+          "subtitle": "Campaign Management Platform",
+          "description": "A modern campaign management platform with protected routes, dashboards, task assignment, analytics, and secure session-based authentication.",
+          "category": "Frontend",
+          "icon": "megaphone",
+          "techTags": ["React", "TypeScript", "Vite", "TanStack Query", "Tailwind CSS", "Node.js", "MongoDB"],
+          "githubUrl": "https://github.com/IntikhabKhursheed/CampaignForge",
+          "featured": false
+        },
+        {
+          "title": "TaskFlow",
+          "subtitle": "Smart Task Manager",
+          "description": "A polished task management app with Kanban boards, filters, drag-and-drop, search, and real-time Firebase sync.",
+          "category": "Frontend",
+          "icon": "kanban",
+          "techTags": ["React", "TypeScript", "Ant Design", "Firebase", "Firestore", "DnD", "dayjs"],
+          "pageUrl": "https://github.com/IntikhabKhursheed/TaskFlow-SmartTaskManager",
+          "githubUrl": "https://github.com/IntikhabKhursheed/TaskFlow-SmartTaskManager",
+          "featured": false
+        },
+        {
+          "title": "Invoice Dashboard",
+          "subtitle": "Billing & Tracking System",
+          "description": "Full-stack invoice management platform for freelancers and small businesses to create, manage, and track invoices with a responsive dashboard.",
+          "category": "Full Stack",
+          "icon": "invoice",
+          "techTags": ["Next.js", "React", "Tailwind CSS", "Node.js", "Express", "MongoDB", "Vercel"],
+          "pageUrl": "https://github.com/IntikhabKhursheed/StreamlineInvoice",
+          "githubUrl": "https://github.com/IntikhabKhursheed/StreamlineInvoice",
+          "featured": false
+        },
+        {
+          "title": "DHQ Hospital",
+          "subtitle": "Desktop Management System",
+          "description": "Offline-first desktop application for patient management, appointment scheduling, and medical records with Windows and macOS compatibility.",
+          "category": "Desktop",
+          "icon": "desktop",
+          "techTags": ["Electron.js", "JavaScript", "HTML5", "CSS3", "Node.js"],
+          "pageUrl": "https://github.com/IntikhabKhursheed",
+          "githubUrl": "https://github.com/IntikhabKhursheed",
+          "featured": false
+        }
       ],
       "experience": [
-        { "title": "Full Stack Developer", "company": "Codnocrats Innovating Solutions", "location": "Peshawar, Pakistan", "dates": "Aug 2025 - Present", "bullets": ["Building EstateIQ, AI-driven real estate platform", "Leading full-stack development and production deployment"] },
-        { "title": "Frontend Developer (MERN Stack)", "company": "Troon Technologies", "location": "Islamabad, Pakistan", "dates": "Sep 2024 - Aug 2025", "bullets": ["Developed healthcare app frontend with Angular", "Implemented dashboards, API integrations, and real-time features"] },
-        { "title": "Frontend Developer", "company": "Codnocrats Innovating Solutions", "location": "Peshawar, Pakistan", "dates": "Jul 2023 - Aug 2024", "bullets": ["CareOS, Nexus AI, and other SaaS apps", "Worked on AI integration, role-based access, and performance optimization"] }
-      ]
+        {
+          "title": "Full Stack Developer",
+          "company": "Codnocrats Innovating Solutions",
+          "dates": "Aug 2025 - Present",
+          "location": "Peshawar, Pakistan",
+          "color": "cyan",
+          "bullets": [
+            "Building EstateIQ, an AI-driven real estate platform.",
+            "Leading full-stack development and production deployment."
+          ]
+        },
+        {
+          "title": "Frontend Developer (MERN Stack)",
+          "company": "Troon Technologies",
+          "dates": "Sep 2024 - Aug 2025",
+          "location": "Islamabad, Pakistan",
+          "color": "purple",
+          "bullets": [
+            "Developed healthcare app frontend using Angular.",
+            "Implemented dashboards, API integrations, and real-time features."
+          ]
+        },
+        {
+          "title": "Frontend Developer",
+          "company": "Codnocrats Innovating Solutions",
+          "dates": "Jul 2023 - Aug 2024",
+          "location": "Peshawar, Pakistan",
+          "color": "green",
+          "bullets": [
+            "Worked on CareOS, Nexus AI, and other SaaS apps.",
+            "Handled AI integration, role-based access, and performance optimization."
+          ]
+        }
+      ],
+      "experienceStats": [
+        { "number": "15+", "label": "Projects Delivered" },
+        { "number": "2+", "label": "Years Experience" },
+        { "number": "30+", "label": "Technologies Used" },
+        { "number": "4+", "label": "Problem Domains" }
+      ],
+      "testimonial": {
+        "quote": "Intikhab is a dependable full stack developer who delivers high-quality work, communicates clearly, and understands modern product requirements.",
+        "author": "Client from CareOS Project",
+        "tag": "Healthcare Industry"
+      },
+      "contactRows": [
+        { "label": "Email", "value": "intikhabkhursheed@gmail.com", "href": "mailto:intikhabkhursheed@gmail.com", "icon": "email" },
+        { "label": "Phone", "value": "+92 335 9919883", "href": "tel:+923359919883", "icon": "phone" },
+        { "label": "Location", "value": "Peshawar, Pakistan", "href": "", "icon": "location" },
+        { "label": "GitHub", "value": "github.com/IntikhabKhursheed", "href": "https://github.com/IntikhabKhursheed", "icon": "github" },
+        { "label": "LinkedIn", "value": "linkedin.com/in/intikhab-khursheed-afridi-028a51285", "href": "https://www.linkedin.com/in/intikhab-khursheed-afridi-028a51285/", "icon": "linkedin" },
+        { "label": "WhatsApp", "value": "wa.me/923359919883", "href": "https://wa.me/923359919883", "icon": "whatsapp" }
+      ],
+      "status": {
+        "label": "CURRENT STATUS",
+        "text": "Available for new projects",
+        "helper": "Message me when you need product-minded full stack support."
+      }
     };
   </script>
-  <script src="js/main.js" type="module"></script>
 </body>
 </html>

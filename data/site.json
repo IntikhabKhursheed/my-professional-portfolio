@@ -1,129 +1,220 @@
 {
-  "name": "INTIKHAB KHURSHEED",
-  "display_name": "Intikhab Khursheed",
-  "name_parts": ["INTIKHAB", "KHURSHEED"],
-  "role": "Full Stack JavaScript Developer",
-  "yearsExperience": "2+",
-  "projectCount": 15,
-  "techCount": 30,
-  "domainCount": 4,
-  "domainHints": ["Healthcare", "SaaS", "Productivity", "Enterprise"],
-  "summary": "I build modern web experiences with React, Angular, Node.js, and MongoDB, combining clean UI, scalable architecture, and thoughtful product decisions.",
-  "about": "Full Stack Developer building production-ready web apps with the MERN stack and Angular. I have shipped healthcare platforms, task managers, dashboards, and enterprise tools with a focus on responsive UI, robust APIs, and fast iteration.",
+  "name": "Intikhab Khursheed",
+  "displayName": "Intikhab Khursheed",
+  "nameParts": ["Intikhab", "Khursheed"],
+  "availabilityLabel": "// AVAILABLE FOR HIRE",
+  "heroRoles": [
+    "Full Stack JavaScript Developer",
+    "React \u00b7 Angular \u00b7 Node.js \u00b7 MongoDB",
+    "AI-Powered App Builder"
+  ],
+  "summary": "I build scalable AI-powered web applications with modern technologies. Experienced in full-stack development, REST APIs, JWT authentication, and production deployment.",
+  "statusText": "Building scalable products",
+  "about": "Passionate about building solutions that combine strong user experience with reliable engineering. I have spent 2+ years shipping production-grade applications across healthcare, SaaS, real estate, and productivity domains.",
+  "contactIntro": "Ready to start your next project? Let's discuss how we can turn ideas into a polished product with a strong user experience.",
   "location": "Peshawar, Pakistan",
   "email": "intikhabkhursheed@gmail.com",
   "phone": "+92 335 9919883",
-  "resume_url": "assets/Intikhab_Resume.pdf",
-  "headshot": "assets/images/profile-cutout.png",
-  "about_image": "assets/images/Roome_v2.png",
-  "trustedTechnologies": ["React", "Angular", "Node.js", "MongoDB", "TypeScript", "Tailwind CSS", "AWS", "Docker"],
-  "aboutStats": [
-    { "value": "2+", "label": "Years Experience" },
-    { "value": "15+", "label": "Projects Completed" },
-    { "value": "100%", "label": "Client Focus" },
-    { "value": "24/7", "label": "Problem Solving" }
+  "resumeUrl": "assets/Intikhab_Resume.pdf",
+  "socials": [
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/intikhab-khursheed-afridi-028a51285/"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/IntikhabKhursheed"
+    },
+    {
+      "label": "Email",
+      "url": "mailto:intikhabkhursheed@gmail.com"
+    },
+    {
+      "label": "WhatsApp",
+      "url": "https://wa.me/923359919883"
+    }
+  ],
+  "heroStats": [
+    { "number": "2+", "label": "Years Experience" },
+    { "number": "15+", "label": "Projects Completed" },
+    { "number": "100%", "label": "Client Satisfaction" },
+    { "number": "24/7", "label": "Support Mindset" }
   ],
   "skills": [
-    { "category": "Frontend", "items": ["JavaScript (ES6+)", "React.js", "Next.js", "Angular", "TypeScript", "HTML5", "CSS3", "SCSS", "Tailwind CSS"] },
-    { "category": "Backend", "items": ["Node.js", "Express.js", "REST APIs", "JWT", "Firebase Auth"] },
-    { "category": "Databases", "items": ["MongoDB", "MySQL", "Firestore", "Local Storage"] },
-    { "category": "Tools", "items": ["Git", "GitHub", "Vercel", "Docker", "Figma", "Postman", "Firebase"] },
-    { "category": "Quality", "items": ["Agile Collaboration", "Debugging", "Performance Tuning", "Responsive UI", "Accessibility"] }
+    {
+      "category": "Frontend",
+      "accent": "cyan",
+      "mode": "progress",
+      "items": [
+        { "name": "React / Next.js", "value": 95 },
+        { "name": "Angular", "value": 85 },
+        { "name": "TypeScript", "value": 90 },
+        { "name": "Tailwind CSS", "value": 92 }
+      ]
+    },
+    {
+      "category": "Backend",
+      "accent": "purple",
+      "mode": "progress",
+      "items": [
+        { "name": "Node.js / Express", "value": 93 },
+        { "name": "MongoDB", "value": 88 },
+        { "name": "REST APIs / JWT", "value": 90 },
+        { "name": "Docker / AWS", "value": 78 }
+      ]
+    },
+    {
+      "category": "Tools & Others",
+      "accent": "green",
+      "mode": "tags",
+      "items": ["Git", "GitHub", "Vercel", "Figma", "Postman", "Cypress", "Firebase", "Firestore", "DnD"]
+    }
   ],
   "projects": [
     {
-      "title": "CampaignForge",
-      "subtitle": "Campaign Management Platform",
-      "description": "A modern campaign management platform built with React, TypeScript, and Node.js.",
-      "tech": ["React 18", "TypeScript", "Vite", "TanStack Query", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
-      "live": "",
-      "repo": "https://github.com/IntikhabKhursheed/CampaignForge"
-    },
-    {
-      "title": "TaskFlow",
-      "subtitle": "Smart Task Manager",
-      "description": "A polished task management app with Kanban boards, filters, and real-time Firebase sync.",
-      "tech": ["React 18", "TypeScript", "Ant Design", "Firebase Auth", "Firestore", "DnD", "dayjs"],
-      "live": "",
-      "repo": "https://github.com/IntikhabKhursheed/TaskFlow-SmartTaskManager"
-    },
-    {
-      "title": "Invoice Dashboard",
-      "subtitle": "Billing & Tracking System",
-      "description": "Full-stack invoice management platform for freelancers and small businesses.",
-      "tech": ["Next.js", "React", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "Vercel"],
-      "live": "",
-      "repo": "https://github.com/IntikhabKhursheed/StreamlineInvoice"
-    },
-    {
-      "title": "DHQ Hospital System",
-      "subtitle": "Desktop Application",
-      "description": "Offline-first desktop application for patient management and appointment scheduling.",
-      "tech": ["Electron.js", "JavaScript", "HTML5", "CSS3", "Node.js", "Local Storage"],
-      "live": "",
-      "repo": ""
-    },
-    {
       "title": "CareOS",
       "subtitle": "AI Hospital Management System",
-      "description": "Production-ready hospital management system with Grok AI for clinical notes, drug interaction checks, and real-time alerts.",
-      "tech": ["React", "Angular", "Node.js", "MongoDB", "Tailwind CSS", "AWS", "Docker"],
-      "live": "https://careos-hospital-client.vercel.app/login",
-      "repo": "https://github.com/IntikhabKhursheed"
+      "description": "Production-ready hospital management system with Grok AI for clinical notes, drug interaction checks, real-time alerts with Socket.io, and role-based access for 8 user types.",
+      "category": "AI",
+      "icon": "hospital",
+      "techTags": ["React", "Angular", "Node.js", "MongoDB", "Tailwind CSS", "AWS", "Docker", "Socket.io", "JWT"],
+      "liveUrl": "https://careos-hospital-client.vercel.app/login",
+      "githubUrl": "https://github.com/IntikhabKhursheed",
+      "featured": true
     },
     {
       "title": "NexusCRM",
       "subtitle": "AI-Powered Sales Intelligence Platform",
       "description": "A multi-tenant CRM for small and mid-sized businesses with AI deal scoring, revenue forecasting, personalized outreach, and subscription-ready SaaS architecture.",
-      "tech": ["Next.js", "React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Socket.io", "Stripe"],
-      "live": "",
-      "repo": "https://github.com/IntikhabKhursheed/nexus-crm"
+      "category": "Full Stack",
+      "icon": "crm",
+      "techTags": ["Next.js", "React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Socket.io", "Stripe", "TypeScript"],
+      "githubUrl": "https://github.com/IntikhabKhursheed/nexus-crm",
+      "featured": false
     },
     {
       "title": "Nexus AI",
       "subtitle": "AI Project Planning Platform",
-      "description": "AI-powered task breakdowns and intelligent workflow management with interactive planning dashboards.",
-      "tech": ["React", "Node.js", "MongoDB", "Tailwind CSS", "Docker"],
-      "live": "https://nexus-ai-vertax.vercel.app/login",
-      "repo": "https://github.com/IntikhabKhursheed"
+      "description": "AI-powered task breakdowns and intelligent workflow management with interactive planning dashboards for teams and solo builders.",
+      "category": "AI",
+      "icon": "brain",
+      "techTags": ["React", "Node.js", "MongoDB", "Tailwind CSS", "Docker", "Gemini AI", "TypeScript"],
+      "liveUrl": "https://nexus-ai-vertax.vercel.app/login",
+      "githubUrl": "https://github.com/IntikhabKhursheed",
+      "featured": false
     },
     {
       "title": "EstateIQ",
       "subtitle": "AI Real Estate Platform",
-      "description": "Property listing, valuation, and AI-powered investment scoring with natural language property search and Gemini valuation.",
-      "tech": ["Angular", "Node.js", "MongoDB", "Gemini AI", "Tailwind CSS"],
-      "live": "https://real-estate-app-client-amber.vercel.app/",
-      "repo": "https://github.com/IntikhabKhursheed"
+      "description": "Property listing, valuation, and AI-powered investment scoring with natural language search and Gemini-driven property intelligence across Pakistan and the Middle East.",
+      "category": "AI",
+      "icon": "building",
+      "techTags": ["Angular", "Node.js", "MongoDB", "Gemini AI", "Tailwind CSS", "REST APIs", "JWT"],
+      "liveUrl": "https://real-estate-app-client-amber.vercel.app/",
+      "githubUrl": "https://github.com/IntikhabKhursheed",
+      "featured": false
+    },
+    {
+      "title": "CampaignForge",
+      "subtitle": "Campaign Management Platform",
+      "description": "A modern campaign management platform with protected routes, dashboards, task assignment, analytics, and secure session-based authentication.",
+      "category": "Frontend",
+      "icon": "megaphone",
+      "techTags": ["React", "TypeScript", "Vite", "TanStack Query", "Tailwind CSS", "Node.js", "MongoDB"],
+      "githubUrl": "https://github.com/IntikhabKhursheed/CampaignForge",
+      "featured": false
+    },
+    {
+      "title": "TaskFlow",
+      "subtitle": "Smart Task Manager",
+      "description": "A polished task management app with Kanban boards, filters, drag-and-drop, search, and real-time Firebase sync.",
+      "category": "Frontend",
+      "icon": "kanban",
+      "techTags": ["React", "TypeScript", "Ant Design", "Firebase", "Firestore", "DnD", "dayjs"],
+      "pageUrl": "https://github.com/IntikhabKhursheed/TaskFlow-SmartTaskManager",
+      "githubUrl": "https://github.com/IntikhabKhursheed/TaskFlow-SmartTaskManager",
+      "featured": false
+    },
+    {
+      "title": "Invoice Dashboard",
+      "subtitle": "Billing & Tracking System",
+      "description": "Full-stack invoice management platform for freelancers and small businesses to create, manage, and track invoices with a responsive dashboard.",
+      "category": "Full Stack",
+      "icon": "invoice",
+      "techTags": ["Next.js", "React", "Tailwind CSS", "Node.js", "Express", "MongoDB", "Vercel"],
+      "pageUrl": "https://github.com/IntikhabKhursheed/StreamlineInvoice",
+      "githubUrl": "https://github.com/IntikhabKhursheed/StreamlineInvoice",
+      "featured": false
+    },
+    {
+      "title": "DHQ Hospital",
+      "subtitle": "Desktop Management System",
+      "description": "Offline-first desktop application for patient management, appointment scheduling, and medical records with Windows and macOS compatibility.",
+      "category": "Desktop",
+      "icon": "desktop",
+      "techTags": ["Electron.js", "JavaScript", "HTML5", "CSS3", "Node.js"],
+      "pageUrl": "https://github.com/IntikhabKhursheed",
+      "githubUrl": "https://github.com/IntikhabKhursheed",
+      "featured": false
     }
   ],
   "experience": [
     {
-      "title": "Frontend Developer",
-      "company": "Troon Technologies",
-      "location": "Islamabad, Pakistan",
-      "dates": "Sep 2024 - Aug 2025",
+      "title": "Full Stack Developer",
+      "company": "Codnocrats Innovating Solutions",
+      "dates": "Aug 2025 - Present",
+      "location": "Peshawar, Pakistan",
+      "color": "cyan",
       "bullets": [
-        "Developed responsive web applications using Angular, TypeScript, HTML, SCSS, and JavaScript.",
-        "Integrated APIs to deliver real-time data and improved user experience.",
-        "Collaborated with design and backend teams to ensure smooth functionality."
+        "Building EstateIQ, an AI-driven real estate platform.",
+        "Leading full-stack development and production deployment."
       ]
     },
     {
-      "title": "Full-Stack Developer (MERN)",
-      "company": "Codnocrats Innovating Solution",
-      "location": "Peshawar, Pakistan",
-      "dates": "Mar 2023 - Sep 2024",
+      "title": "Frontend Developer (MERN Stack)",
+      "company": "Troon Technologies",
+      "dates": "Sep 2024 - Aug 2025",
+      "location": "Islamabad, Pakistan",
+      "color": "purple",
       "bullets": [
-        "Built and maintained MERN stack applications with clean and scalable code.",
-        "Developed and integrated REST APIs for robust backend communication.",
-        "Improved application performance and UI responsiveness."
+        "Developed healthcare app frontend using Angular.",
+        "Implemented dashboards, API integrations, and real-time features."
+      ]
+    },
+    {
+      "title": "Frontend Developer",
+      "company": "Codnocrats Innovating Solutions",
+      "dates": "Jul 2023 - Aug 2024",
+      "location": "Peshawar, Pakistan",
+      "color": "green",
+      "bullets": [
+        "Worked on CareOS, Nexus AI, and other SaaS apps.",
+        "Handled AI integration, role-based access, and performance optimization."
       ]
     }
   ],
-  "socials": [
-    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/intikhab-khursheed-afridi-028a51285/" },
-    { "label": "GitHub", "url": "https://github.com/IntikhabKhursheed" },
-    { "label": "Email", "url": "mailto:intikhabkhursheed@gmail.com" },
-    { "label": "WhatsApp", "url": "https://wa.me/923359919883" }
-  ]
+  "experienceStats": [
+    { "number": "15+", "label": "Projects Delivered" },
+    { "number": "2+", "label": "Years Experience" },
+    { "number": "30+", "label": "Technologies Used" },
+    { "number": "4+", "label": "Problem Domains" }
+  ],
+  "testimonial": {
+    "quote": "Intikhab is a dependable full stack developer who delivers high-quality work, communicates clearly, and understands modern product requirements.",
+    "author": "Client from CareOS Project",
+    "tag": "Healthcare Industry"
+  },
+  "contactRows": [
+    { "label": "Email", "value": "intikhabkhursheed@gmail.com", "href": "mailto:intikhabkhursheed@gmail.com", "icon": "email" },
+    { "label": "Phone", "value": "+92 335 9919883", "href": "tel:+923359919883", "icon": "phone" },
+    { "label": "Location", "value": "Peshawar, Pakistan", "href": "", "icon": "location" },
+    { "label": "GitHub", "value": "github.com/IntikhabKhursheed", "href": "https://github.com/IntikhabKhursheed", "icon": "github" },
+    { "label": "LinkedIn", "value": "linkedin.com/in/intikhab-khursheed-afridi-028a51285", "href": "https://www.linkedin.com/in/intikhab-khursheed-afridi-028a51285/", "icon": "linkedin" },
+    { "label": "WhatsApp", "value": "wa.me/923359919883", "href": "https://wa.me/923359919883", "icon": "whatsapp" }
+  ],
+  "status": {
+    "label": "CURRENT STATUS",
+    "text": "Available for new projects",
+    "helper": "Message me when you need product-minded full stack support."
+  }
 }
