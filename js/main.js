@@ -235,6 +235,37 @@ function renderSkills(data) {
   }
 }
 
+function renderResearchInterests(data) {
+  const grid = document.getElementById("researchGrid");
+  if (!grid) return;
+
+  grid.innerHTML = "";
+  const interests = data.researchInterests || [
+    { icon: "chip", title: "Artificial Intelligence & Machine Learning (Applied AI Systems)", description: "Applied AI systems for practical problem-solving and intelligent automation." },
+    { icon: "brain", title: "Large Language Models (LLMs) and Natural Language Processing (NLP)", description: "Language understanding, generation, and retrieval-driven workflows." },
+    { icon: "spark", title: "Explainable AI (XAI) for transparent decision-making systems", description: "Transparent decision-making systems that improve trust and interpretability." },
+    { icon: "sync", title: "AI-driven anomaly detection and predictive analytics in enterprise systems", description: "Enterprise systems that detect unusual behavior and anticipate future outcomes." },
+    { icon: "lock", title: "Secure software architectures and authentication systems", description: "Building resilient foundations for safe access control and protected application flows." },
+    { icon: "shield", title: "Cybersecurity in modern web and distributed applications", description: "Studying threat-aware design for modern, networked software environments." },
+    { icon: "globe", title: "Real-time distributed systems and event-driven architectures", description: "Designing responsive systems that react quickly to data and user actions." },
+    { icon: "layers", title: "AI integration in SaaS and multi-tenant platforms", description: "Combining intelligence with scalable application patterns for enterprise use cases." },
+  ];
+
+  interests.forEach((item) => {
+    const card = createElement("article", "feature-card");
+    const icon = createElement("span", "feature-icon");
+    icon.innerHTML = iconSvg(item.icon);
+    card.append(icon, createElement("h3", null, item.title), createElement("p", null, item.description));
+    grid.append(card);
+  });
+
+  const statement = document.getElementById("researchStatement");
+  if (statement) {
+    statement.textContent =
+      "I am particularly interested in research that bridges applied machine learning with secure and scalable system design for real-world enterprise applications.";
+  }
+}
+
 function renderHighlights(data) {
   const grid = document.getElementById("highlightsGrid");
   if (!grid) return;
@@ -333,6 +364,14 @@ function renderProjects(data) {
     );
     metaRow.querySelector(".project-category").style.color = categoryColor(project.category);
     left.append(metaRow);
+
+    if (project.status) {
+      const status = createElement("span", "tech-tag", project.status);
+      status.style.borderColor = "rgba(251, 146, 60, 0.45)";
+      status.style.background = "rgba(251, 146, 60, 0.12)";
+      status.style.color = "var(--accent-orange)";
+      left.append(status);
+    }
 
     const links = createElement("div", "project-links");
     if (project.liveUrl) {
@@ -681,6 +720,7 @@ async function init() {
   renderHero(data);
   renderAbout(data);
   renderSkills(data);
+  renderResearchInterests(data);
   renderProjects(data);
   renderHighlights(data);
   renderExperience(data);

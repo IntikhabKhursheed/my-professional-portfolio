@@ -89,6 +89,48 @@
       ]
     }
   ],
+  "researchInterests": [
+    {
+      "icon": "chip",
+      "title": "Artificial Intelligence & Machine Learning (Applied AI Systems)",
+      "description": "Applied AI systems for practical problem-solving and intelligent automation."
+    },
+    {
+      "icon": "brain",
+      "title": "Large Language Models (LLMs) and Natural Language Processing (NLP)",
+      "description": "Language understanding, generation, and retrieval-driven workflows."
+    },
+    {
+      "icon": "spark",
+      "title": "Explainable AI (XAI) for transparent decision-making systems",
+      "description": "Transparent decision-making systems that improve trust and interpretability."
+    },
+    {
+      "icon": "sync",
+      "title": "AI-driven anomaly detection and predictive analytics in enterprise systems",
+      "description": "Enterprise systems that detect unusual behavior and anticipate future outcomes."
+    },
+    {
+      "icon": "lock",
+      "title": "Secure software architectures and authentication systems",
+      "description": "Building resilient foundations for safe access control and protected application flows."
+    },
+    {
+      "icon": "shield",
+      "title": "Cybersecurity in modern web and distributed applications",
+      "description": "Studying threat-aware design for modern, networked software environments."
+    },
+    {
+      "icon": "globe",
+      "title": "Real-time distributed systems and event-driven architectures",
+      "description": "Designing responsive systems that react quickly to data and user actions."
+    },
+    {
+      "icon": "layers",
+      "title": "AI integration in SaaS and multi-tenant platforms",
+      "description": "Combining intelligence with scalable application patterns for enterprise use cases."
+    }
+  ],
   "projects": [
     {
       "title": "CareOS",
@@ -131,6 +173,16 @@
       "techTags": ["Angular", "Node.js", "MongoDB", "Gemini AI", "Tailwind CSS", "REST APIs", "JWT"],
       "liveUrl": "https://real-estate-app-client-amber.vercel.app/",
       "githubUrl": "https://github.com/IntikhabKhursheed",
+      "featured": false
+    },
+    {
+      "title": "MallOS",
+      "subtitle": "AI Smart Mall Management System",
+      "description": "AI-powered full-stack mall management platform designed for real-time operational intelligence and enterprise-scale analytics.",
+      "status": "IN PROGRESS",
+      "category": "Full Stack",
+      "icon": "building",
+      "techTags": ["Angular", "Node.js", "Express.js", "MongoDB", "Socket.io", "Gemini AI", "TypeScript", "REST APIs", "MEAN Stack"],
       "featured": false
     },
     {
