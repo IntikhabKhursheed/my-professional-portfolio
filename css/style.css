@@ -1736,6 +1736,39 @@ main {
     grid-template-columns: 1fr;
   }
 
+  #researchGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  #research .feature-card {
+    padding: 12px !important;
+    min-height: 136px !important;
+    gap: 10px !important;
+  }
+
+  #research .feature-icon {
+    width: 28px !important;
+    height: 28px !important;
+    margin-bottom: 4px !important;
+  }
+
+  #research .feature-card h3 {
+    font-size: 11px !important;
+    line-height: 1.2 !important;
+    min-height: 2.4em !important;
+    overflow: hidden !important;
+  }
+
+  #research .feature-card p {
+    display: none !important;
+  }
+
+  #researchStatement {
+    margin-top: 12px;
+    font-size: 14px;
+  }
+
   .project-card.featured {
     grid-column: span 1;
   }
