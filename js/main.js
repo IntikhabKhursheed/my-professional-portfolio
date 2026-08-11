@@ -68,7 +68,6 @@ function renderHero(data) {
   setText("heroNameLine2", nameParts[1]);
   setText("heroSummary", data.summary || "");
   setText("heroStatusText", data.statusText || "");
-  setText("availabilityLabel", data.availabilityLabel || "// AVAILABLE FOR HIRE");
   setText("contactIntro", data.contactIntro || "");
   setText("currentYear", String(new Date().getFullYear()));
 
@@ -241,6 +240,7 @@ function renderResearchInterests(data) {
 
   grid.innerHTML = "";
   const interests = data.researchInterests || [
+    { icon: "code", title: "Formal Methods and Program Correctness", description: "Using type systems and programming language theory to provide compile-time correctness guarantees for concurrent and hardware systems." },
     { icon: "chip", title: "Artificial Intelligence & Machine Learning (Applied AI Systems)", description: "Applied AI systems for practical problem-solving and intelligent automation." },
     { icon: "brain", title: "Large Language Models (LLMs) and Natural Language Processing (NLP)", description: "Language understanding, generation, and retrieval-driven workflows." },
     { icon: "spark", title: "Explainable AI (XAI) for transparent decision-making systems", description: "Transparent decision-making systems that improve trust and interpretability." },
@@ -314,22 +314,7 @@ function labelForProjectLink(project, type) {
 }
 
 function renderProjects(data) {
-  const fallbackProject = {
-    title: "Renadom Swap / Alvara Protocol",
-    subtitle: "Blockchain Token Swap DEX",
-    description: "A decentralized exchange (DEX) with AI-driven analytics, enabling token swaps on the blockchain with smart contract integration, real-time price feeds, and advanced trading analytics.",
-    category: "Web3",
-    icon: "link",
-    techTags: ["Solidity", "Web3.js", "React", "TypeScript", "Ethers.js"],
-    githubUrl: "",
-    featured: false,
-  };
-
   const projects = [...(data.projects || [])];
-  if (!projects.some((project) => project.title === fallbackProject.title)) {
-    projects.push(fallbackProject);
-  }
-  projects.sort((a, b) => Number(b.featured) - Number(a.featured));
   setText("projectCountLabel", `${projects.length} Projects`);
 
   const defaultFilters = ["All", "Full Stack", "AI", "Frontend", "Desktop", "Web3"];
@@ -731,7 +716,7 @@ async function init() {
   setupMobileMenu();
   setupAnchorLinks();
   enhanceProjectsAfterRender();
-  typeHeroRoles(data.heroRoles || ["Full Stack Developer"]);
+  typeHeroRoles(data.heroRoles || ["Full-Stack & AI Engineer | Seeking MS Research"]);
 }
 
 init().catch((error) => {

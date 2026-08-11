@@ -2,12 +2,9 @@
   "name": "Intikhab Khursheed",
   "displayName": "Intikhab Khursheed",
   "nameParts": ["Intikhab", "Khursheed"],
-  "availabilityLabel": "// AVAILABLE FOR HIRE",
   "profileImage": "assets/images/profile-cutout.png",
   "heroRoles": [
-    "Full Stack JavaScript Developer",
-    "React \u00b7 Angular \u00b7 Node.js \u00b7 MongoDB",
-    "AI-Powered App Builder"
+    "Full-Stack & AI Engineer | Seeking MS Research"
   ],
   "summary": "I build scalable AI-powered web applications with modern technologies. Experienced in full-stack development, REST APIs, JWT authentication, and production deployment.",
   "statusText": "Building scalable products",
@@ -91,6 +88,11 @@
   ],
   "researchInterests": [
     {
+      "icon": "code",
+      "title": "Formal Methods and Program Correctness",
+      "description": "Using type systems and programming language theory to provide compile-time correctness guarantees for concurrent and hardware systems."
+    },
+    {
       "icon": "chip",
       "title": "Artificial Intelligence & Machine Learning (Applied AI Systems)",
       "description": "Applied AI systems for practical problem-solving and intelligent automation."
@@ -133,99 +135,64 @@
   ],
   "projects": [
     {
-      "title": "CareOS",
-      "subtitle": "AI Hospital Management System",
-      "description": "Production-ready hospital management system with Grok AI for clinical notes, drug interaction checks, real-time alerts with Socket.io, and role-based access for 8 user types.",
-      "category": "AI",
-      "icon": "hospital",
-      "techTags": ["React", "Angular", "Node.js", "MongoDB", "Tailwind CSS", "AWS", "Docker", "Socket.io", "JWT"],
-      "liveUrl": "https://careos-hospital-client.vercel.app/login",
+      "title": "DHQ Hospital Management System",
+      "subtitle": "Electron.js Offline-First Desktop Application",
+      "description": "Electron.js offline-first desktop application deployed at DHQ Bajaur Government Hospital, KPK Pakistan. Serving 500+ daily users across patient records, appointments, and admin workflows.",
+      "category": "Desktop",
+      "icon": "desktop",
+      "techTags": ["Electron.js", "Node.js", "MongoDB"],
+      "status": "LIVE DEPLOYMENT",
       "githubUrl": "https://github.com/IntikhabKhursheed",
       "featured": true
     },
     {
-      "title": "NexusCRM",
-      "subtitle": "AI-Powered Sales Intelligence Platform",
-      "description": "A multi-tenant CRM for small and mid-sized businesses with AI deal scoring, revenue forecasting, personalized outreach, and subscription-ready SaaS architecture.",
+      "title": "CareOS \u2014 AI Clinical Decision Support Platform",
+      "subtitle": "Real-Time AI Clinical Workflows",
+      "description": "Self-built AI clinical platform with real-time workflows, Grok AI integration, and 8-role RBAC system. Live and publicly accessible.",
+      "category": "AI",
+      "icon": "hospital",
+      "techTags": ["React", "Node.js", "MongoDB", "Grok AI", "Socket.io", "Docker"],
+      "liveUrl": "https://careos.vercel.app",
+      "githubUrl": "https://github.com/IntikhabKhursheed",
+      "featured": false
+    },
+    {
+      "title": "EstateIQ \u2014 AI Real Estate Intelligence Platform",
+      "subtitle": "Explainable AI Investment Scoring",
+      "description": "NLP property search with explainable AI investment scoring from 0 to 100 with reasoning. Multi-role JWT authentication.",
+      "category": "AI",
+      "icon": "building",
+      "techTags": ["Angular 19", "Node.js", "MongoDB", "Gemini AI", "Python", "JWT"],
+      "githubUrl": "https://github.com/IntikhabKhursheed",
+      "featured": false
+    },
+    {
+      "title": "UniGate-AI \u2014 LLM Admissions Intelligence Platform",
+      "subtitle": "Admissions Intelligence for 185+ Universities",
+      "description": "LLM-powered admissions intelligence covering 185+ universities with Gemini AI extraction pipeline.",
+      "category": "AI",
+      "icon": "brain",
+      "techTags": ["Node.js", "Gemini AI", "MongoDB"],
+      "githubUrl": "https://github.com/IntikhabKhursheed",
+      "featured": false
+    },
+    {
+      "title": "NexusCRM \u2014 Multi-Tenant AI Sales Platform",
+      "subtitle": "SaaS CRM with Tenant Isolation",
+      "description": "Multi-tenant SaaS CRM with NLP search pipeline hardened against prompt injection and schema-level tenant isolation.",
       "category": "Full Stack",
       "icon": "crm",
-      "techTags": ["Next.js", "React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Socket.io", "Stripe", "TypeScript"],
+      "techTags": ["Next.js", "Node.js", "Express", "MongoDB", "Stripe", "TypeScript"],
       "githubUrl": "https://github.com/IntikhabKhursheed/nexus-crm",
       "featured": false
     },
     {
-      "title": "Nexus AI",
-      "subtitle": "AI Project Planning Platform",
-      "description": "AI-powered task breakdowns and intelligent workflow management with interactive planning dashboards for teams and solo builders.",
-      "category": "AI",
-      "icon": "brain",
-      "techTags": ["React", "Node.js", "MongoDB", "Tailwind CSS", "Docker", "Gemini AI", "TypeScript"],
-      "liveUrl": "https://nexus-ai-vertax.vercel.app/login",
-      "githubUrl": "https://github.com/IntikhabKhursheed",
-      "featured": false
-    },
-    {
-      "title": "EstateIQ",
-      "subtitle": "AI Real Estate Platform",
-      "description": "Property listing, valuation, and AI-powered investment scoring with natural language search and Gemini-driven property intelligence across Pakistan and the Middle East.",
+      "title": "MallOS \u2014 Smart Mall Management Dashboard",
+      "subtitle": "Live Operations Dashboard with AI Analytics",
+      "description": "Live operations dashboard with AI anomaly detection on real-time sales trends and ApexCharts analytics suite.",
       "category": "AI",
       "icon": "building",
-      "techTags": ["Angular", "Node.js", "MongoDB", "Gemini AI", "Tailwind CSS", "REST APIs", "JWT"],
-      "liveUrl": "https://real-estate-app-client-amber.vercel.app/",
-      "githubUrl": "https://github.com/IntikhabKhursheed",
-      "featured": false
-    },
-    {
-      "title": "MallOS",
-      "subtitle": "AI Smart Mall Management System",
-      "description": "AI-powered full-stack mall management platform designed for real-time operational intelligence and enterprise-scale analytics.",
-      "status": "IN PROGRESS",
-      "category": "Full Stack",
-      "icon": "building",
-      "techTags": ["Angular", "Node.js", "Express.js", "MongoDB", "Socket.io", "Gemini AI", "TypeScript", "REST APIs", "MEAN Stack"],
-      "featured": false
-    },
-    {
-      "title": "CampaignForge",
-      "subtitle": "Campaign Management Platform",
-      "description": "A modern campaign management platform with protected routes, dashboards, task assignment, analytics, and secure session-based authentication.",
-      "category": "Frontend",
-      "icon": "megaphone",
-      "techTags": ["React", "TypeScript", "Vite", "TanStack Query", "Tailwind CSS", "Node.js", "MongoDB"],
-      "githubUrl": "https://github.com/IntikhabKhursheed/CampaignForge",
-      "featured": false
-    },
-    {
-      "title": "TaskFlow",
-      "subtitle": "Smart Task Manager",
-      "description": "A polished task management app with Kanban boards, filters, drag-and-drop, search, and real-time Firebase sync.",
-      "category": "Frontend",
-      "icon": "kanban",
-      "techTags": ["React", "TypeScript", "Ant Design", "Firebase", "Firestore", "DnD", "dayjs"],
-      "pageUrl": "https://github.com/IntikhabKhursheed/TaskFlow-SmartTaskManager",
-      "githubUrl": "https://github.com/IntikhabKhursheed/TaskFlow-SmartTaskManager",
-      "featured": false
-    },
-    {
-      "title": "Invoice Dashboard",
-      "subtitle": "Billing & Tracking System",
-      "description": "Full-stack invoice management platform for freelancers and small businesses to create, manage, and track invoices with a responsive dashboard.",
-      "category": "Full Stack",
-      "icon": "invoice",
-      "techTags": ["Next.js", "React", "Tailwind CSS", "Node.js", "Express", "MongoDB", "Vercel"],
-      "pageUrl": "https://github.com/IntikhabKhursheed/StreamlineInvoice",
-      "githubUrl": "https://github.com/IntikhabKhursheed/StreamlineInvoice",
-      "featured": false
-    },
-    {
-      "title": "DHQ Hospital",
-      "subtitle": "Desktop Management System",
-      "description": "Offline-first desktop application for patient management, appointment scheduling, and medical records with Windows and macOS compatibility.",
-      "category": "Desktop",
-      "icon": "desktop",
-      "techTags": ["Electron.js", "JavaScript", "HTML5", "CSS3", "Node.js"],
-      "pageUrl": "https://github.com/IntikhabKhursheed",
-      "githubUrl": "https://github.com/IntikhabKhursheed",
+      "techTags": ["Angular 19", "Node.js", "Socket.io", "Gemini AI", "ApexCharts", "MongoDB"],
       "featured": false
     }
   ],
