@@ -20,7 +20,7 @@
   "socials": [
     {
       "label": "LinkedIn",
-      "url": "https://www.linkedin.com/in/intikhab-khursheed-afridi-028a51285/"
+      "url": "https://www.linkedin.com/in/intikhab-khursheed-028a51285/"
     },
     {
       "label": "GitHub",
@@ -280,7 +280,7 @@
     { "label": "Phone", "value": "+92 335 9919883", "href": "tel:+923359919883", "icon": "phone" },
     { "label": "Location", "value": "Peshawar, Pakistan", "href": "", "icon": "location" },
     { "label": "GitHub", "value": "github.com/IntikhabKhursheed", "href": "https://github.com/IntikhabKhursheed", "icon": "github" },
-    { "label": "LinkedIn", "value": "linkedin.com/in/intikhab-khursheed-afridi-028a51285", "href": "https://www.linkedin.com/in/intikhab-khursheed-afridi-028a51285/", "icon": "linkedin" },
+    { "label": "LinkedIn", "value": "linkedin.com/in/intikhab-khursheed-028a51285", "href": "https://www.linkedin.com/in/intikhab-khursheed-028a51285/", "icon": "linkedin" },
     { "label": "WhatsApp", "value": "wa.me/923359919883", "href": "https://wa.me/923359919883", "icon": "whatsapp" }
   ],
   "status": {
