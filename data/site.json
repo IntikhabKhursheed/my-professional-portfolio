@@ -4,10 +4,20 @@
   "nameParts": ["Intikhab", "Khursheed"],
   "profileImage": "assets/images/profile-cutout.png",
   "heroRoles": [
-    "Full-Stack & AI Engineer | Seeking MS Research"
+    "Full-Stack & AI Engineer",
+    "React & Angular Developer",
+    "Node.js & MongoDB Expert",
+    "AI Integration Specialist",
+    "Gemini & Grok AI Engineer",
+    "Graduate Research Applicant",
+    "Seeking MS in AI & Formal Methods",
+    "Healthcare Systems Builder",
+    "SaaS Platform Developer",
+    "Cybersecurity & Secure Systems",
+    "3+ Years Professional Experience"
   ],
   "summary": "I build scalable AI-powered web applications with modern technologies. Experienced in full-stack development, REST APIs, JWT authentication, and production deployment.",
-  "statusText": "Building scalable products",
+  "statusText": "Building systems. Seeking MS Research.",
   "about": "Passionate about building solutions that combine strong user experience with reliable engineering. I have spent 2+ years shipping production-grade applications across healthcare, SaaS, real estate, and productivity domains.",
   "contactIntro": "Ready to start your next project? Let's discuss how we can turn ideas into a polished product with a strong user experience.",
   "location": "Peshawar, Pakistan",

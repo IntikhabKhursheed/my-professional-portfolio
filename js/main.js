@@ -716,7 +716,19 @@ async function init() {
   setupMobileMenu();
   setupAnchorLinks();
   enhanceProjectsAfterRender();
-  typeHeroRoles(data.heroRoles || ["Full-Stack & AI Engineer | Seeking MS Research"]);
+  typeHeroRoles(data.heroRoles || [
+    "Full-Stack & AI Engineer",
+    "React & Angular Developer",
+    "Node.js & MongoDB Expert",
+    "AI Integration Specialist",
+    "Gemini & Grok AI Engineer",
+    "Graduate Research Applicant",
+    "Seeking MS in AI & Formal Methods",
+    "Healthcare Systems Builder",
+    "SaaS Platform Developer",
+    "Cybersecurity & Secure Systems",
+    "3+ Years Professional Experience",
+  ]);
 }
 
 init().catch((error) => {

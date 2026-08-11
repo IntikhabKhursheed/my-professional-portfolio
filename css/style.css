@@ -505,7 +505,7 @@ a:focus-visible,
   gap: 18px;
 }
 
-/* .terminal-line {
+.terminal-line {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -522,7 +522,7 @@ a:focus-visible,
 .terminal-value {
   color: var(--text-secondary);
   font-size: 15px;
-} */
+}
 
 .hero-stats-shell {
   margin-top: 48px;
