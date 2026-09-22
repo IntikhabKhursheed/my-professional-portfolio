@@ -180,6 +180,19 @@ function renderSkills(data) {
       ],
     },
     {
+      category: "Hardware Verification",
+      accent: "purple",
+      items: [
+        { name: "SystemVerilog", value: 88 },
+        { name: "SVA", value: 85 },
+        { name: "RTL Verification", value: 84 },
+        { name: "Anvil", value: 82 },
+        { name: "Formal Methods", value: 80 },
+        { name: "Timing Safety", value: 78 },
+        { name: "Valid/Ready", value: 80 },
+      ],
+    },
+    {
       category: "Tools & DevOps",
       accent: "green",
       items: [
@@ -227,7 +240,7 @@ function renderSkills(data) {
     cloud.innerHTML = "";
     cloud.append(createElement("div", "section-label mono", "TECHNOLOGIES I WORK WITH"));
     const tags = createElement("div", "skill-tags skills-cloud-tags");
-    ["React", "Angular", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "Node.js", "Express", "MongoDB", "Grok AI", "Stripe", "Socket.io", "Solidity", "Web3.js", "Git", "Vercel", "CI/CD", "REST APIs"].forEach((tag) => {
+    ["React", "Angular", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "Node.js", "Express", "MongoDB", "Grok AI", "Stripe", "Socket.io", "SystemVerilog", "SVA", "Anvil", "Formal Methods", "RTL Verification", "Valid/Ready", "Solidity", "Web3.js", "Git", "Vercel", "CI/CD", "REST APIs"].forEach((tag) => {
       tags.append(createElement("span", null, tag));
     });
     cloud.append(tags);
@@ -296,6 +309,8 @@ function categoryColor(category) {
   switch (category) {
     case "AI":
       return "var(--accent-cyan)";
+    case "Research":
+      return "var(--accent-purple)";
     case "Full Stack":
       return "var(--accent-purple)";
     case "Frontend":
@@ -317,7 +332,7 @@ function renderProjects(data) {
   const projects = [...(data.projects || [])];
   setText("projectCountLabel", `${projects.length} Projects`);
 
-  const defaultFilters = ["All", "Full Stack", "AI", "Frontend", "Desktop", "Web3"];
+  const defaultFilters = ["All", "Full Stack", "AI", "Research", "Frontend", "Desktop", "Web3"];
   const filters = defaultFilters.filter((filter) => filter === "All" || projects.some((project) => project.category === filter));
   const filterRow = document.getElementById("projectFilters");
   filterRow.innerHTML = "";

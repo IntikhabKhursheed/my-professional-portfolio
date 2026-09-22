@@ -358,6 +358,20 @@
           ]
         },
         {
+          "category": "Hardware Verification",
+          "accent": "purple",
+          "mode": "progress",
+          "items": [
+            { "name": "SystemVerilog", "value": 88 },
+            { "name": "SVA", "value": 85 },
+            { "name": "RTL Verification", "value": 84 },
+            { "name": "Anvil", "value": 82 },
+            { "name": "Formal Methods", "value": 80 },
+            { "name": "Timing Safety", "value": 78 },
+            { "name": "Valid/Ready", "value": 80 }
+          ]
+        },
+        {
           "category": "Tools & DevOps",
           "accent": "green",
           "mode": "progress",
@@ -417,6 +431,28 @@
         }
       ],
       "projects": [
+        {
+          "title": "Anvil RTL Bug Study — Hardware Verification & Timing Safety",
+          "subtitle": "Independent formal-methods research project",
+          "description": "Research project investigating real-world SystemVerilog RTL bugs and the boundary of Anvil's timing-safety guarantees. I analyzed 5 documented hardware bugs from OpenTitan, iDMA, common_cells, and CVFPU, covering handshake/protocol, width/parameterization, handshake-gated state advancement, and functional omission bugs. Built 3 standalone SystemVerilog reproducers with SVA assertions and tested Anvil encodings to determine which bug mechanisms Anvil prevents, partially prevents, or does not cover.",
+          "category": "Research",
+          "icon": "chip",
+          "techTags": ["SystemVerilog", "SVA", "RTL Verification", "Anvil", "Timing Safety", "Back-pressure", "Valid/Ready"],
+          "status": "RESEARCH",
+          "githubUrl": "https://github.com/IntikhabKhursheed/anvil-rtl-bug-study",
+          "featured": true
+        },
+        {
+          "title": "Anvil Vector Dot-Product Accelerator",
+          "subtitle": "Hardware acceleration and safety analysis",
+          "description": "Implemented a 4-lane vector dot-product accelerator in SystemVerilog and reimplemented it in Anvil. The project covers ready/valid back-pressure, partial final groups, SVA properties, deliberate RTL bugs, differential testing, and Anvil's lifetime/timing-safety checks.",
+          "category": "Research",
+          "icon": "code",
+          "techTags": ["SystemVerilog", "Anvil", "Ready/Valid", "SVA", "Differential Testing", "Formal Verification"],
+          "status": "ASSIGNMENT",
+          "githubUrl": "https://github.com/IntikhabKhursheed/anvil-vector-dot-product",
+          "featured": false
+        },
         {
           "title": "DHQ Hospital Management System",
           "subtitle": "Electron.js Offline-First Desktop Application",
