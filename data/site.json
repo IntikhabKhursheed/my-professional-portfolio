@@ -4,7 +4,7 @@
   "nameParts": ["Intikhab", "Khursheed"],
   "profileImage": "assets/images/profile-cutout.png",
   "heroRoles": [
-    "Full-Stack & AI Engineer | Independent RTL Verification Researcher",
+    "Full-Stack & AI Engineer | RTL Verification Research",
     "AI, SaaS & Healthcare Systems",
     "RTL Verification & Formal Methods",
     "Production Software Engineering",
@@ -12,8 +12,8 @@
     "Thesis-Based MSc Research Opportunities"
   ],
   "summary": "I build production software for healthcare, SaaS, and business workflows, and explore how verification methods improve system reliability.",
-  "statusText": "Available for full-time, remote, and contract software roles | Open to thesis-based MSc research opportunities",
-  "about": "I am a Full-Stack and AI Engineer with 3+ years of professional experience building applications for healthcare, SaaS, and enterprise workflows. My core stack includes React, Angular, Node.js, TypeScript, Python, MongoDB, Docker, Socket.io, JWT/RBAC, and AI APIs.\n\nI built an offline-first Hospital Management System deployed at DHQ Bajaur Government Hospital in Pakistan. The system supports 500+ daily users and gave me practical experience building software for real operational workflows.\n\nAlongside software engineering, I have developed an independent interest in RTL verification and formal methods. In an independent RTL research assignment guided by Dr. Umang Mathur at NUS School of Computing, I implemented a SystemVerilog vector dot-product accelerator, wrote SystemVerilog Assertions, reimplemented the design in Anvil HDL, and studied five documented RTL bugs from OpenTitan, iDMA, common_cells, and CVFPU.\n\nI am applying for thesis-based MSc opportunities while remaining open to full-stack, AI engineering, verification-tooling, and software-engineering roles.",
+  "statusText": "Building dependable software. Exploring verification.",
+  "about": "I am a Full-Stack and AI Engineer with 3+ years of professional experience building applications for healthcare, SaaS, and enterprise workflows. My core stack includes React, Angular, Node.js, TypeScript, Python, MongoDB, Docker, Socket.io, JWT/RBAC, and AI APIs.\n\nI built an offline-first Hospital Management System deployed at DHQ Bajaur Government Hospital in Pakistan. The system supports 500+ daily users and gave me practical experience building software for real operational workflows.\n\nAlongside software engineering, I have developed an independent interest in RTL verification and formal methods. In an independent RTL research assignment guided by Dr. Umang Mathur, NUS School of Computing, I implemented a SystemVerilog vector dot-product accelerator, wrote SystemVerilog Assertions, reimplemented the design in Anvil HDL, and studied five documented RTL bugs from OpenTitan, iDMA, common_cells, and CVFPU.\n\nI am applying for thesis-based MSc opportunities while remaining open to full-stack, AI engineering, verification-tooling, and software-engineering roles.",
   "contactIntro": "Available for full-stack, AI engineering, SaaS, and verification-tooling opportunities. Also open to thesis-based MSc research conversations in dependable systems, AI, software engineering, cybersecurity, formal methods, and RTL verification.",
   "location": "Peshawar, Pakistan",
   "email": "intikhabkhursheed@gmail.com",
@@ -150,12 +150,12 @@
       "description": "Real SystemVerilog bugs can survive simulation and review when back-pressure, parameterization, or functional completeness are not fully verified.",
       "problem": "Real SystemVerilog bugs can survive simulation and review when back-pressure, parameterization, or functional completeness are not fully verified.",
       "role": "Analyzed five documented bugs from OpenTitan, iDMA, common_cells, and CVFPU; built three standalone SystemVerilog/Verilator reproducers and SVA properties.",
-      "result": "Identified that Anvil can prevent specific channel-level back-pressure mechanisms, partially reduce risk in FIFO bookkeeping when sequencing is expressed through channels, and does not replace width checking or functional verification.",
+      "result": "Anvil can partially reduce FIFO pointer-advancement risk when the design explicitly sequences pointer updates after channel communication. It does not prove general FIFO bookkeeping correctness.",
       "category": "Research",
       "type": "Research",
       "icon": "chip",
       "techTags": ["SystemVerilog", "SVA", "Verilator", "RTL Verification", "Anvil HDL", "Timing Safety", "Ready/Valid", "Differential Testing"],
-      "githubUrl": "https://github.com/IntikhabKhursheed",
+      "githubUrl": "https://github.com/IntikhabKhursheed/anvil-rtl-bug-study",
       "featured": false
     },
     {
@@ -169,7 +169,7 @@
       "type": "Research",
       "icon": "chip",
       "techTags": ["SystemVerilog", "Anvil HDL", "SVA", "Ready/Valid", "Differential Testing", "RTL Design"],
-      "githubUrl": "https://github.com/IntikhabKhursheed",
+      "githubUrl": "https://github.com/IntikhabKhursheed/anvil-vector-dot-product",
       "featured": false
     },
     {
@@ -255,7 +255,7 @@
         "Build AI-integrated dashboards, NLP pipelines, RAG retrieval systems, and SaaS tooling for client projects.",
         "Develop full-stack applications using TypeScript, React, Angular, Node.js, MongoDB, Docker, and AI APIs.",
         "Conduct independent RTL verification work using SystemVerilog, SVA, Verilator, and Anvil HDL.",
-        "Completed an independent RTL research assignment guided by Dr. Umang Mathur at NUS School of Computing."
+        "Completed an independent RTL research assignment guided by Dr. Umang Mathur, NUS School of Computing."
       ]
     },
     {
@@ -289,11 +289,6 @@
     { "number": "AI", "label": "Healthcare, SaaS & AI Systems" },
     { "number": "RTL", "label": "Verification Research" }
   ],
-  "testimonial": {
-    "quote": "Intikhab builds reliable product-focused software and brings clear engineering judgment to AI, SaaS, and system design work.",
-    "author": "Independent Software & Research Work",
-    "tag": "Product and Verification"
-  },
   "contactRows": [
     { "label": "Email", "value": "intikhabkhursheed@gmail.com", "href": "mailto:intikhabkhursheed@gmail.com", "icon": "email" },
     { "label": "Phone", "value": "+92 335 9919883", "href": "tel:+923359919883", "icon": "phone" },
@@ -304,7 +299,7 @@
   ],
   "status": {
     "label": "CURRENT STATUS",
-    "text": "Available for software, AI, and research opportunities",
-    "helper": "Open to discussing full-stack development, AI-integrated products, SaaS systems, verification tooling, and thesis-based MSc research opportunities."
+    "text": "Building dependable software. Exploring verification.",
+    "helper": ""
   }
 }

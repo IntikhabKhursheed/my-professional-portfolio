@@ -189,9 +189,10 @@ function renderSkills(data) {
     cloud.innerHTML = "";
     cloud.append(createElement("div", "section-label mono", "TECHNOLOGIES I WORK WITH"));
     const tags = createElement("div", "skill-tags skills-cloud-tags");
-    ["React", "Angular", "Next.js", "Node.js", "Express.js", "TypeScript", "JavaScript", "Python", "MongoDB", "Docker", "Socket.io", "JWT", "RBAC", "Grok AI", "Gemini AI", "RAG Pipelines", "SystemVerilog", "SVA", "Verilator", "Anvil HDL", "Formal Methods", "Git", "GitHub", "Docker", "Vercel", "CI/CD"].forEach((tag) => {
-      tags.append(createElement("span", null, tag));
-    });
+    const shortList = ["React", "Angular", "Node.js", "TypeScript", "Python", "MongoDB", "Docker", "AI APIs", "SystemVerilog", "SVA", "Verilator", "Anvil HDL"];
+    const text = createElement("div", "skill-inline-list");
+    text.textContent = shortList.join(" · ");
+    tags.append(text);
     cloud.append(tags);
   }
 }
@@ -419,13 +420,10 @@ function renderExperience(data) {
   });
 
   const feedback = document.getElementById("feedbackCard");
-  feedback.innerHTML = "";
-  feedback.append(
-    createElement("div", "feedback-label", "CLIENT FEEDBACK"),
-    createElement("p", "feedback-quote", data.testimonial?.quote || ""),
-    createElement("div", "feedback-author", `- ${data.testimonial?.author || ""}`),
-    createElement("div", "feedback-pill", data.testimonial?.tag || "")
-  );
+  if (feedback) {
+    feedback.innerHTML = "";
+    feedback.hidden = true;
+  }
 }
 
 function contactIcon(name) {
