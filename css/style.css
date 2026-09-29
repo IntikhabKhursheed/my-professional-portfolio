@@ -1093,6 +1093,23 @@ a:focus-visible,
   overflow: hidden;
 }
 
+.project-details {
+  display: grid;
+  gap: 10px;
+}
+
+.project-detail {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.project-detail strong {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
 .tech-tags {
   display: flex;
   flex-wrap: wrap;

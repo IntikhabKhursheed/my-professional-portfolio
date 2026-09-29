@@ -38,10 +38,10 @@
     }
   ],
   "heroStats": [
-    { "number": "3+", "label": "Years Software Engineering" },
-    { "number": "500+", "label": "Daily Users at DHQ Bajaur" },
-    { "number": "AI", "label": "SaaS & Healthcare Systems" },
-    { "number": "RTL", "label": "Verification & Formal Methods" }
+    { "number": "3+ Years Software Engineering", "label": "experience" },
+    { "number": "500+ Daily Users at DHQ Bajaur", "label": "impact" },
+    { "number": "AI, SaaS & Healthcare Systems", "label": "focus" },
+    { "number": "RTL Verification & Formal Methods", "label": "research" }
   ],
   "aboutStats": [
     { "value": "3+", "label": "Years Software Engineering" },
