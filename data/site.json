@@ -4,22 +4,17 @@
   "nameParts": ["Intikhab", "Khursheed"],
   "profileImage": "assets/images/profile-cutout.png",
   "heroRoles": [
-    "Full-Stack & AI Engineer",
-    "React & Angular Developer",
-    "Node.js & MongoDB Expert",
-    "AI Integration Specialist",
-    "Gemini & Grok AI Engineer",
-    "Graduate Research Applicant",
-    "Seeking MS in AI & Formal Methods",
-    "Healthcare Systems Builder",
-    "SaaS Platform Developer",
-    "Cybersecurity & Secure Systems",
-    "3+ Years Professional Experience"
+    "Full-Stack & AI Engineer | Independent RTL Verification Researcher",
+    "AI, SaaS & Healthcare Systems",
+    "RTL Verification & Formal Methods",
+    "Production Software Engineering",
+    "3+ Years Software Engineering",
+    "Thesis-Based MSc Research Opportunities"
   ],
-  "summary": "I build scalable AI-powered web applications with modern technologies. Experienced in full-stack development, REST APIs, JWT authentication, and production deployment.",
-  "statusText": "Building systems. Seeking MS Research.",
-  "about": "Passionate about building solutions that combine strong user experience with reliable engineering. I have spent 2+ years shipping production-grade applications across healthcare, SaaS, real estate, and productivity domains.",
-  "contactIntro": "Ready to start your next project? Let's discuss how we can turn ideas into a polished product with a strong user experience.",
+  "summary": "I build production software for healthcare, SaaS, and business workflows, and explore how verification methods improve system reliability.",
+  "statusText": "Available for full-time, remote, and contract software roles | Open to thesis-based MSc research opportunities",
+  "about": "I am a Full-Stack and AI Engineer with 3+ years of professional experience building applications for healthcare, SaaS, and enterprise workflows. My core stack includes React, Angular, Node.js, TypeScript, Python, MongoDB, Docker, Socket.io, JWT/RBAC, and AI APIs.\n\nI built an offline-first Hospital Management System deployed at DHQ Bajaur Government Hospital in Pakistan. The system supports 500+ daily users and gave me practical experience building software for real operational workflows.\n\nAlongside software engineering, I have developed an independent interest in RTL verification and formal methods. In an independent RTL research assignment guided by Dr. Umang Mathur at NUS School of Computing, I implemented a SystemVerilog vector dot-product accelerator, wrote SystemVerilog Assertions, reimplemented the design in Anvil HDL, and studied five documented RTL bugs from OpenTitan, iDMA, common_cells, and CVFPU.\n\nI am applying for thesis-based MSc opportunities while remaining open to full-stack, AI engineering, verification-tooling, and software-engineering roles.",
+  "contactIntro": "Available for full-stack, AI engineering, SaaS, and verification-tooling opportunities. Also open to thesis-based MSc research conversations in dependable systems, AI, software engineering, cybersecurity, formal methods, and RTL verification.",
   "location": "Peshawar, Pakistan",
   "email": "intikhabkhursheed@gmail.com",
   "phone": "+92 335 9919883",
@@ -43,214 +38,261 @@
     }
   ],
   "heroStats": [
-    { "number": "2+", "label": "Years Experience" },
-    { "number": "15+", "label": "Projects Completed" },
-    { "number": "100%", "label": "Client Satisfaction" },
-    { "number": "24/7", "label": "Support Mindset" }
+    { "number": "3+", "label": "Years Software Engineering" },
+    { "number": "500+", "label": "Daily Users at DHQ Bajaur" },
+    { "number": "AI", "label": "SaaS & Healthcare Systems" },
+    { "number": "RTL", "label": "Verification & Formal Methods" }
+  ],
+  "aboutStats": [
+    { "value": "3+", "label": "Years Software Engineering" },
+    { "value": "500+", "label": "Daily Users Supported" },
+    { "value": "AI", "label": "Healthcare, SaaS & AI Systems" },
+    { "value": "RTL", "label": "Verification Research" }
+  ],
+  "aboutFeatures": [
+    {
+      "icon": "layers",
+      "title": "Production Systems",
+      "description": "Building software for real users in healthcare, SaaS, and business workflows."
+    },
+    {
+      "icon": "code",
+      "title": "Full-Stack Development",
+      "description": "React, Angular, Node.js, TypeScript, APIs, databases, and deployment."
+    },
+    {
+      "icon": "brain",
+      "title": "AI Integration",
+      "description": "RAG workflows, AI APIs, NLP pipelines, dashboards, and automation."
+    },
+    {
+      "icon": "lock",
+      "title": "Secure Application Design",
+      "description": "JWT, RBAC, multi-tenant isolation, authentication, and protected workflows."
+    },
+    {
+      "icon": "chip",
+      "title": "RTL Verification Research",
+      "description": "SystemVerilog, SVA, Verilator, differential testing, and bug reproduction."
+    },
+    {
+      "icon": "doc",
+      "title": "Documentation and Reproducibility",
+      "description": "Clear project documentation, source records, reproducible commands, and technical write-ups."
+    }
   ],
   "skills": [
     {
-      "category": "Frontend",
-      "accent": "cyan",
-      "mode": "progress",
-      "items": [
-        { "name": "React", "value": 95 },
-        { "name": "Next.js", "value": 90 },
-        { "name": "Angular", "value": 85 },
-        { "name": "TypeScript", "value": 88 },
-        { "name": "Tailwind CSS", "value": 95 },
-        { "name": "JavaScript", "value": 95 }
-      ]
+      "title": "Production Software Engineering",
+      "skills": ["React", "Angular", "Next.js", "Node.js", "Express.js", "TypeScript", "JavaScript", "Python", "MongoDB", "Mongoose", "REST APIs", "Socket.io", "Docker", "Git", "GitHub", "Vercel", "CI/CD", "Stripe", "JWT", "RBAC", "multi-tenant SaaS"]
     },
     {
-      "category": "Backend",
-      "accent": "cyan",
-      "mode": "progress",
-      "items": [
-        { "name": "Node.js", "value": 82 },
-        { "name": "Express.js", "value": 80 },
-        { "name": "MongoDB", "value": 78 },
-        { "name": "Mongoose", "value": 78 }
-      ]
+      "title": "AI and Applied Systems",
+      "skills": ["LLM Integration", "Gemini API", "Grok AI", "RAG Pipelines", "NLP Workflows", "AI Dashboards", "Explainable AI", "AI Agents", "anomaly detection", "real-time analytics"]
     },
     {
-      "category": "AI & Integrations",
-      "accent": "purple",
-      "mode": "progress",
-      "items": [
-        { "name": "Grok AI API", "value": 85 },
-        { "name": "AI Email Writer", "value": 88 },
-        { "name": "Deal Scoring AI", "value": 82 },
-        { "name": "OpenAI / LLMs", "value": 80 }
-      ]
-    },
-    {
-      "category": "Tools & DevOps",
-      "accent": "green",
-      "mode": "progress",
-      "items": [
-        { "name": "Git / GitHub", "value": 92 },
-        { "name": "Vercel", "value": 90 },
-        { "name": "Socket.io", "value": 82 },
-        { "name": "Stripe", "value": 80 }
-      ]
+      "title": "RTL and Verification Research",
+      "skills": ["SystemVerilog", "SystemVerilog Assertions", "RTL Design", "Hardware Verification", "Verilator", "Differential Testing", "Anvil HDL", "Timing Safety", "Ready/Valid Protocols", "Formal Methods"]
     }
   ],
   "researchInterests": [
     {
-      "icon": "code",
-      "title": "Formal Methods and Program Correctness",
-      "description": "Using type systems and programming language theory to provide compile-time correctness guarantees for concurrent and hardware systems."
-    },
-    {
-      "icon": "chip",
-      "title": "Artificial Intelligence & Machine Learning (Applied AI Systems)",
-      "description": "Applied AI systems for practical problem-solving and intelligent automation."
-    },
-    {
       "icon": "brain",
-      "title": "Large Language Models (LLMs) and Natural Language Processing (NLP)",
-      "description": "Language understanding, generation, and retrieval-driven workflows."
-    },
-    {
-      "icon": "spark",
-      "title": "Explainable AI (XAI) for transparent decision-making systems",
-      "description": "Transparent decision-making systems that improve trust and interpretability."
-    },
-    {
-      "icon": "sync",
-      "title": "AI-driven anomaly detection and predictive analytics in enterprise systems",
-      "description": "Enterprise systems that detect unusual behavior and anticipate future outcomes."
-    },
-    {
-      "icon": "lock",
-      "title": "Secure software architectures and authentication systems",
-      "description": "Building resilient foundations for safe access control and protected application flows."
-    },
-    {
-      "icon": "shield",
-      "title": "Cybersecurity in modern web and distributed applications",
-      "description": "Studying threat-aware design for modern, networked software environments."
-    },
-    {
-      "icon": "globe",
-      "title": "Real-time distributed systems and event-driven architectures",
-      "description": "Designing responsive systems that react quickly to data and user actions."
+      "title": "AI systems and LLM-enabled applications",
+      "description": "Building dependable AI workflows and practical language-driven systems."
     },
     {
       "icon": "layers",
-      "title": "AI integration in SaaS and multi-tenant platforms",
-      "description": "Combining intelligence with scalable application patterns for enterprise use cases."
+      "title": "Software engineering and scalable SaaS systems",
+      "description": "Designing maintainable systems for business workflows and production users."
+    },
+    {
+      "icon": "lock",
+      "title": "Secure application architecture, RBAC, JWT, and multi-tenant isolation",
+      "description": "Developing safe access patterns and protected application flows."
+    },
+    {
+      "icon": "chip",
+      "title": "RTL verification, SystemVerilog Assertions, and timing-safe HDL design",
+      "description": "Studying verification strategies that improve hardware reliability."
+    },
+    {
+      "icon": "code",
+      "title": "Formal methods, programming languages, and type systems",
+      "description": "Exploring how reasoning tools strengthen system correctness."
+    },
+    {
+      "icon": "sync",
+      "title": "Real-time and event-driven systems",
+      "description": "Improving responsiveness and reliability in distributed workflows."
     }
   ],
+  "researchStatement": "I am seeking thesis-based MSc opportunities where these interests connect to reliable, secure, or intelligent systems.",
   "projects": [
     {
       "title": "DHQ Hospital Management System",
-      "subtitle": "Electron.js Offline-First Desktop Application",
-      "description": "Electron.js offline-first desktop application deployed at DHQ Bajaur Government Hospital, KPK Pakistan. Serving 500+ daily users across patient records, appointments, and admin workflows.",
+      "subtitle": "Offline-First Hospital Operations Application",
+      "description": "Hospital workflows required dependable software that could operate without continuous internet access.",
+      "problem": "Hospital workflows required dependable software that could operate without continuous internet access.",
+      "role": "Built an offline-first Electron.js desktop application for hospital workflows and administration.",
+      "result": "Deployed at DHQ Bajaur Government Hospital, Pakistan, supporting 500+ daily users.",
       "category": "Desktop",
+      "type": "Desktop | Live Deployment",
       "icon": "desktop",
-      "techTags": ["Electron.js", "Node.js", "MongoDB"],
-      "status": "LIVE DEPLOYMENT",
+      "techTags": ["Electron.js", "Node.js", "MongoDB", "Offline-First", "Healthcare Systems"],
+      "status": "Live Deployment",
       "githubUrl": "https://github.com/IntikhabKhursheed",
       "featured": true
     },
     {
-      "title": "CareOS \u2014 AI Clinical Decision Support Platform",
+      "title": "Anvil RTL Bug Study — Hardware Verification & Timing Safety",
+      "subtitle": "Independent RTL Verification and Timing-Safety Study",
+      "description": "Real SystemVerilog bugs can survive simulation and review when back-pressure, parameterization, or functional completeness are not fully verified.",
+      "problem": "Real SystemVerilog bugs can survive simulation and review when back-pressure, parameterization, or functional completeness are not fully verified.",
+      "role": "Analyzed five documented bugs from OpenTitan, iDMA, common_cells, and CVFPU; built three standalone SystemVerilog/Verilator reproducers and SVA properties.",
+      "result": "Identified that Anvil can prevent specific channel-level back-pressure mechanisms, partially reduce risk in FIFO bookkeeping when sequencing is expressed through channels, and does not replace width checking or functional verification.",
+      "category": "Research",
+      "type": "Research",
+      "icon": "chip",
+      "techTags": ["SystemVerilog", "SVA", "Verilator", "RTL Verification", "Anvil HDL", "Timing Safety", "Ready/Valid", "Differential Testing"],
+      "githubUrl": "https://github.com/IntikhabKhursheed",
+      "featured": false
+    },
+    {
+      "title": "Anvil Vector Dot-Product Accelerator",
+      "subtitle": "SystemVerilog, SVA, and Anvil HDL Comparison",
+      "description": "Explore the boundary between timing-safe HDL guarantees and functional RTL verification.",
+      "problem": "Explore the boundary between timing-safe HDL guarantees and functional RTL verification.",
+      "role": "Implemented a 4-lane vector dot-product accelerator in SystemVerilog with IDLE/LOAD/REDUCE/OUTPUT FSM, ready/valid back-pressure, partial-lane support, and six SVA properties; reimplemented it in Anvil HDL.",
+      "result": "Differential testing across seven cases matched expected results and showed that timing safety does not automatically establish functional correctness.",
+      "category": "Research",
+      "type": "Research",
+      "icon": "chip",
+      "techTags": ["SystemVerilog", "Anvil HDL", "SVA", "Ready/Valid", "Differential Testing", "RTL Design"],
+      "githubUrl": "https://github.com/IntikhabKhursheed",
+      "featured": false
+    },
+    {
+      "title": "CareOS — AI Clinical Decision Support Platform",
       "subtitle": "Real-Time AI Clinical Workflows",
-      "description": "Self-built AI clinical platform with real-time workflows, Grok AI integration, and 8-role RBAC system. Live and publicly accessible.",
+      "description": "Clinical teams need role-controlled workflows and accessible AI-assisted decision support.",
+      "problem": "Clinical teams need role-controlled workflows and accessible AI-assisted decision support.",
+      "role": "Built AI-integrated real-time workflows with Grok AI, Socket.io, Docker, and an 8-role RBAC system.",
+      "result": "Live public deployment.",
       "category": "AI",
+      "type": "AI",
       "icon": "hospital",
-      "techTags": ["React", "Node.js", "MongoDB", "Grok AI", "Socket.io", "Docker"],
+      "techTags": ["React", "Node.js", "MongoDB", "Grok AI", "Socket.io", "Docker", "RBAC"],
       "liveUrl": "https://careos.vercel.app",
       "githubUrl": "https://github.com/IntikhabKhursheed",
       "featured": false
     },
     {
-      "title": "EstateIQ \u2014 AI Real Estate Intelligence Platform",
+      "title": "NexusCRM — Multi-Tenant AI Sales Platform",
+      "subtitle": "SaaS CRM with Tenant Isolation",
+      "description": "Multi-tenant SaaS platforms need reliable tenant isolation and controlled access.",
+      "problem": "Multi-tenant SaaS platforms need reliable tenant isolation and controlled access.",
+      "role": "Built schema-level tenant isolation, RBAC workflow, NLP search pipeline, and prompt-injection-aware application logic.",
+      "result": "A multi-tenant CRM foundation for AI-supported sales workflows.",
+      "category": "Full Stack",
+      "type": "Full Stack",
+      "icon": "crm",
+      "techTags": ["Next.js", "Node.js", "Express.js", "MongoDB", "Stripe", "TypeScript", "RBAC"],
+      "githubUrl": "https://github.com/IntikhabKhursheed/nexus-crm",
+      "featured": false
+    },
+    {
+      "title": "EstateIQ — AI Real Estate Intelligence Platform",
       "subtitle": "Explainable AI Investment Scoring",
-      "description": "NLP property search with explainable AI investment scoring from 0 to 100 with reasoning. Multi-role JWT authentication.",
+      "description": "NLP-based property search and explainable investment scoring from 0 to 100 with reasoning and multi-role JWT authentication.",
+      "problem": "Property discovery and investment analysis needed explainable, AI-assisted decision support.",
+      "role": "Developed the AI-enabled property search and scoring workflow with multi-role JWT authentication.",
+      "result": "Built an explainable investment scoring interface to support real-estate evaluation decisions.",
       "category": "AI",
+      "type": "AI",
       "icon": "building",
       "techTags": ["Angular 19", "Node.js", "MongoDB", "Gemini AI", "Python", "JWT"],
       "githubUrl": "https://github.com/IntikhabKhursheed",
       "featured": false
     },
     {
-      "title": "UniGate-AI \u2014 LLM Admissions Intelligence Platform",
+      "title": "UniGate-AI — LLM Admissions Intelligence Platform",
       "subtitle": "Admissions Intelligence for 185+ Universities",
-      "description": "LLM-powered admissions intelligence covering 185+ universities with Gemini AI extraction pipeline.",
+      "description": "LLM-powered admissions intelligence platform using a Gemini AI extraction pipeline.",
+      "problem": "Admissions processing needed faster analysis across a large set of institutions and criteria.",
+      "role": "Built the Gemini AI extraction pipeline and the admissions intelligence workflow.",
+      "result": "Created an LLM-powered platform supporting 185+ universities.",
       "category": "AI",
+      "type": "AI",
       "icon": "brain",
       "techTags": ["Node.js", "Gemini AI", "MongoDB"],
       "githubUrl": "https://github.com/IntikhabKhursheed",
       "featured": false
     },
     {
-      "title": "NexusCRM \u2014 Multi-Tenant AI Sales Platform",
-      "subtitle": "SaaS CRM with Tenant Isolation",
-      "description": "Multi-tenant SaaS CRM with NLP search pipeline hardened against prompt injection and schema-level tenant isolation.",
-      "category": "Full Stack",
-      "icon": "crm",
-      "techTags": ["Next.js", "Node.js", "Express", "MongoDB", "Stripe", "TypeScript"],
-      "githubUrl": "https://github.com/IntikhabKhursheed/nexus-crm",
-      "featured": false
-    },
-    {
-      "title": "MallOS \u2014 Smart Mall Management Dashboard",
-      "subtitle": "Live Operations Dashboard with AI Analytics",
-      "description": "Live operations dashboard with AI anomaly detection on real-time sales trends and ApexCharts analytics suite.",
+      "title": "MallOS — Smart Mall Management Dashboard",
+      "subtitle": "Real-Time Operations Dashboard with AI Analytics",
+      "description": "Real-time operations dashboard with anomaly detection on sales trends and analytics visualizations.",
+      "problem": "Mall operations teams needed a live view of sales anomalies and operational trends.",
+      "role": "Built the analytics dashboard and anomaly-detection workflow with real-time monitoring features.",
+      "result": "Delivered a real-time operations dashboard for AI-supported mall operations insight.",
       "category": "AI",
+      "type": "AI",
       "icon": "building",
       "techTags": ["Angular 19", "Node.js", "Socket.io", "Gemini AI", "ApexCharts", "MongoDB"],
+      "githubUrl": "https://github.com/IntikhabKhursheed",
       "featured": false
     }
   ],
   "experience": [
     {
-      "title": "Full Stack Developer",
-      "company": "Codnocrats Innovating Solutions",
-      "dates": "Aug 2025 - Present",
+      "title": "ML / AI Engineer (Freelance)",
+      "company": "Self-Employed",
+      "dates": "Aug 2025 – Present",
       "location": "Peshawar, Pakistan",
       "color": "cyan",
       "bullets": [
-        "Building EstateIQ, an AI-driven real estate platform.",
-        "Leading full-stack development and production deployment."
+        "Build AI-integrated dashboards, NLP pipelines, RAG retrieval systems, and SaaS tooling for client projects.",
+        "Develop full-stack applications using TypeScript, React, Angular, Node.js, MongoDB, Docker, and AI APIs.",
+        "Conduct independent RTL verification work using SystemVerilog, SVA, Verilator, and Anvil HDL.",
+        "Completed an independent RTL research assignment guided by Dr. Umang Mathur at NUS School of Computing."
       ]
     },
     {
       "title": "Frontend Developer (MERN Stack)",
       "company": "Troon Technologies",
-      "dates": "Sep 2024 - Aug 2025",
+      "dates": "Sep 2024 – Aug 2025",
       "location": "Islamabad, Pakistan",
       "color": "purple",
       "bullets": [
-        "Developed healthcare app frontend using Angular.",
-        "Implemented dashboards, API integrations, and real-time features."
+        "Shipped production Angular and MERN applications.",
+        "Built TypeScript libraries, API integrations, dashboards, and real-time frontend features.",
+        "Improved application performance and user experience."
       ]
     },
     {
       "title": "Frontend Developer",
-      "company": "Codnocrats Innovating Solutions",
-      "dates": "Jul 2023 - Aug 2024",
+      "company": "Codnocrats Innovating Solution",
+      "dates": "Jul 2023 – Aug 2024",
       "location": "Peshawar, Pakistan",
       "color": "green",
       "bullets": [
-        "Worked on CareOS, Nexus AI, and other SaaS apps.",
-        "Handled AI integration, role-based access, and performance optimization."
+        "Built frontend and AI-integrated healthcare/SaaS application features.",
+        "Contributed to CareOS and related business systems.",
+        "Worked with role-based access, APIs, and performance-focused interfaces."
       ]
     }
   ],
   "experienceStats": [
-    { "number": "15+", "label": "Projects Delivered" },
-    { "number": "2+", "label": "Years Experience" },
-    { "number": "30+", "label": "Technologies Used" },
-    { "number": "4+", "label": "Problem Domains" }
+    { "number": "3+", "label": "Years Software Engineering" },
+    { "number": "500+", "label": "Daily Users Supported" },
+    { "number": "AI", "label": "Healthcare, SaaS & AI Systems" },
+    { "number": "RTL", "label": "Verification Research" }
   ],
   "testimonial": {
-    "quote": "Intikhab is a dependable full stack developer who delivers high-quality work, communicates clearly, and understands modern product requirements.",
-    "author": "Client from CareOS Project",
-    "tag": "Healthcare Industry"
+    "quote": "Intikhab builds reliable product-focused software and brings clear engineering judgment to AI, SaaS, and system design work.",
+    "author": "Independent Software & Research Work",
+    "tag": "Product and Verification"
   },
   "contactRows": [
     { "label": "Email", "value": "intikhabkhursheed@gmail.com", "href": "mailto:intikhabkhursheed@gmail.com", "icon": "email" },
@@ -262,7 +304,7 @@
   ],
   "status": {
     "label": "CURRENT STATUS",
-    "text": "Available for new projects",
-    "helper": "Message me when you need product-minded full stack support."
+    "text": "Available for software, AI, and research opportunities",
+    "helper": "Open to discussing full-stack development, AI-integrated products, SaaS systems, verification tooling, and thesis-based MSc research opportunities."
   }
 }

@@ -144,94 +144,43 @@ function renderAbout(data) {
 
 function renderSkills(data) {
   const grid = document.getElementById("skillsGrid");
+  if (!grid) return;
   grid.innerHTML = "";
 
-  const groups = [
-    {
-      category: "Frontend",
-      accent: "cyan",
-      items: [
-        { name: "React", value: 95 },
-        { name: "Next.js", value: 90 },
-        { name: "Angular", value: 85 },
-        { name: "TypeScript", value: 88 },
-        { name: "Tailwind CSS", value: 95 },
-        { name: "JavaScript", value: 95 },
-      ],
-    },
-    {
-      category: "Backend",
-      accent: "cyan",
-      items: [
-        { name: "Node.js", value: 82 },
-        { name: "Express.js", value: 80 },
-        { name: "MongoDB", value: 78 },
-        { name: "Mongoose", value: 78 },
-      ],
-    },
-    {
-      category: "AI & Integrations",
-      accent: "purple",
-      items: [
-        { name: "Grok AI API", value: 85 },
-        { name: "AI Email Writer", value: 88 },
-        { name: "Deal Scoring AI", value: 82 },
-        { name: "OpenAI / LLMs", value: 80 },
-      ],
-    },
-    {
-      category: "Hardware Verification",
-      accent: "purple",
-      items: [
-        { name: "SystemVerilog", value: 88 },
-        { name: "SVA", value: 85 },
-        { name: "RTL Verification", value: 84 },
-        { name: "Anvil", value: 82 },
-        { name: "Formal Methods", value: 80 },
-        { name: "Timing Safety", value: 78 },
-        { name: "Valid/Ready", value: 80 },
-      ],
-    },
-    {
-      category: "Tools & DevOps",
-      accent: "green",
-      items: [
-        { name: "Git / GitHub", value: 92 },
-        { name: "Vercel", value: 90 },
-        { name: "Socket.io", value: 82 },
-        { name: "Stripe", value: 80 },
-      ],
-    },
-  ];
+  const groups = (data.skills && data.skills.length)
+    ? data.skills
+    : [
+        {
+          title: "Production Software Engineering",
+          skills: ["React", "Angular", "Next.js", "Node.js", "Express.js", "TypeScript", "JavaScript", "Python", "MongoDB", "Mongoose", "REST APIs", "Socket.io", "Docker", "Git", "GitHub", "Vercel", "CI/CD", "Stripe", "JWT", "RBAC", "multi-tenant SaaS"],
+        },
+        {
+          title: "AI and Applied Systems",
+          skills: ["LLM Integration", "Gemini API", "Grok AI", "RAG Pipelines", "NLP Workflows", "AI Dashboards", "Explainable AI", "AI Agents", "anomaly detection", "real-time analytics"],
+        },
+        {
+          title: "RTL and Verification Research",
+          skills: ["SystemVerilog", "SystemVerilog Assertions", "RTL Design", "Hardware Verification", "Verilator", "Differential Testing", "Anvil HDL", "Timing Safety", "Ready/Valid Protocols", "Formal Methods"],
+        },
+      ];
 
-  groups.forEach((group) => {
+  const colors = ["cyan", "purple", "green"];
+  groups.forEach((group, index) => {
     const card = createElement("article", "skill-card");
-    card.dataset.accent = group.accent || "cyan";
+    card.dataset.accent = colors[index % colors.length] || "cyan";
 
     const head = createElement("div", "skill-head");
-    const title = createElement("h3", null, group.category || "");
+    const title = createElement("h3", null, group.title || "");
     const mark = createElement("span", "skill-mark");
     head.append(title, mark);
-    card.append(head);
 
-    const list = createElement("div", "skill-progress-list");
-    (group.items || []).forEach((item) => {
-      const row = createElement("div", "skill-row");
-      const rowHead = createElement("div", "skill-row-head");
-      rowHead.append(
-        createElement("span", "skill-row-name", item.name),
-        createElement("span", "skill-row-value", `${item.value}%`)
-      );
-      const meter = createElement("div", "skill-meter");
-      const bar = createElement("span");
-      bar.dataset.width = String(item.value || 0);
-      bar.style.setProperty("--skill-width", `${item.value || 0}%`);
-      meter.append(bar);
-      row.append(rowHead, meter);
-      list.append(row);
+    const tags = createElement("div", "skill-tags");
+    (group.skills || group.items || []).forEach((item) => {
+      const name = typeof item === "string" ? item : item.name || "";
+      tags.append(createElement("span", null, name));
     });
-    card.append(list);
 
+    card.append(head, tags);
     grid.append(card);
   });
 
@@ -240,7 +189,7 @@ function renderSkills(data) {
     cloud.innerHTML = "";
     cloud.append(createElement("div", "section-label mono", "TECHNOLOGIES I WORK WITH"));
     const tags = createElement("div", "skill-tags skills-cloud-tags");
-    ["React", "Angular", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "Node.js", "Express", "MongoDB", "Grok AI", "Stripe", "Socket.io", "SystemVerilog", "SVA", "Anvil", "Formal Methods", "RTL Verification", "Valid/Ready", "Solidity", "Web3.js", "Git", "Vercel", "CI/CD", "REST APIs"].forEach((tag) => {
+    ["React", "Angular", "Next.js", "Node.js", "Express.js", "TypeScript", "JavaScript", "Python", "MongoDB", "Docker", "Socket.io", "JWT", "RBAC", "Grok AI", "Gemini AI", "RAG Pipelines", "SystemVerilog", "SVA", "Verilator", "Anvil HDL", "Formal Methods", "Git", "GitHub", "Docker", "Vercel", "CI/CD"].forEach((tag) => {
       tags.append(createElement("span", null, tag));
     });
     cloud.append(tags);
@@ -253,15 +202,12 @@ function renderResearchInterests(data) {
 
   grid.innerHTML = "";
   const interests = data.researchInterests || [
-    { icon: "code", title: "Formal Methods and Program Correctness", description: "Using type systems and programming language theory to provide compile-time correctness guarantees for concurrent and hardware systems." },
-    { icon: "chip", title: "Artificial Intelligence & Machine Learning (Applied AI Systems)", description: "Applied AI systems for practical problem-solving and intelligent automation." },
-    { icon: "brain", title: "Large Language Models (LLMs) and Natural Language Processing (NLP)", description: "Language understanding, generation, and retrieval-driven workflows." },
-    { icon: "spark", title: "Explainable AI (XAI) for transparent decision-making systems", description: "Transparent decision-making systems that improve trust and interpretability." },
-    { icon: "sync", title: "AI-driven anomaly detection and predictive analytics in enterprise systems", description: "Enterprise systems that detect unusual behavior and anticipate future outcomes." },
-    { icon: "lock", title: "Secure software architectures and authentication systems", description: "Building resilient foundations for safe access control and protected application flows." },
-    { icon: "shield", title: "Cybersecurity in modern web and distributed applications", description: "Studying threat-aware design for modern, networked software environments." },
-    { icon: "globe", title: "Real-time distributed systems and event-driven architectures", description: "Designing responsive systems that react quickly to data and user actions." },
-    { icon: "layers", title: "AI integration in SaaS and multi-tenant platforms", description: "Combining intelligence with scalable application patterns for enterprise use cases." },
+    { icon: "brain", title: "AI systems and LLM-enabled applications", description: "Building dependable AI workflows and practical language-driven systems." },
+    { icon: "layers", title: "Software engineering and scalable SaaS systems", description: "Designing maintainable systems for business workflows and production users." },
+    { icon: "lock", title: "Secure application architecture, RBAC, JWT, and multi-tenant isolation", description: "Developing safe access patterns and protected application flows." },
+    { icon: "chip", title: "RTL verification, SystemVerilog Assertions, and timing-safe HDL design", description: "Studying verification strategies that improve hardware reliability." },
+    { icon: "code", title: "Formal methods, programming languages, and type systems", description: "Exploring how reasoning tools strengthen system correctness." },
+    { icon: "sync", title: "Real-time and event-driven systems", description: "Improving responsiveness and reliability in distributed workflows." },
   ];
 
   interests.forEach((item) => {
@@ -274,8 +220,7 @@ function renderResearchInterests(data) {
 
   const statement = document.getElementById("researchStatement");
   if (statement) {
-    statement.textContent =
-      "I am particularly interested in research that bridges applied machine learning with secure and scalable system design for real-world enterprise applications.";
+    statement.textContent = data.researchStatement || "I am seeking thesis-based MSc opportunities where these interests connect to reliable, secure, or intelligent systems.";
   }
 }
 
@@ -284,12 +229,12 @@ function renderHighlights(data) {
   if (!grid) return;
   grid.innerHTML = "";
   const highlights = data.highlights || [
-    { icon: "chip", title: "AI-Integrated SaaS Apps", description: "Built multi-tenant SaaS applications with Grok AI, email writing, deal scoring, and forecasting workflows." },
-    { icon: "palette", title: "Production-Ready UI/UX", description: "Designed responsive, portfolio-ready interfaces with accessible components and precise visual hierarchy." },
-    { icon: "trophy", title: "Modern Framework Mastery", description: "Expert in React, Angular, and Next.js ecosystems from architecture decisions to deployment." },
-    { icon: "globe", title: "Vercel Production Deployments", description: "Shipped full-stack apps with CI/CD pipelines and real production traffic on Vercel." },
-    { icon: "link", title: "Blockchain & Web3", description: "Developed decentralized applications with Solidity, Web3.js, and DEX trading interfaces." },
-    { icon: "sync", title: "Real-Time Applications", description: "Built collaborative products with Socket.io, live notifications, and real-time sync." },
+    { icon: "chip", title: "AI-Integrated SaaS Apps", description: "Built workflows combining AI APIs, dashboards, retrieval pipelines, and operational tooling for business use cases." },
+    { icon: "palette", title: "Production-Ready UI/UX", description: "Designed responsive interfaces with clear hierarchy, functionality, and user-focused workflows." },
+    { icon: "trophy", title: "Software Reliability", description: "Worked across deployment, RBAC, secure access, and operational issues in live systems." },
+    { icon: "globe", title: "Healthcare and Business Systems", description: "Delivered software for real users in healthcare, operations, and service workflows." },
+    { icon: "link", title: "Verification-Minded Engineering", description: "Applied structured testing, differential workflows, and reproducible investigation to complex systems." },
+    { icon: "sync", title: "Real-Time Applications", description: "Built event-driven features with Socket.io and performance-focused interfaces for live workflows." },
   ];
 
   highlights.forEach((item) => {
@@ -332,7 +277,7 @@ function renderProjects(data) {
   const projects = [...(data.projects || [])];
   setText("projectCountLabel", `${projects.length} Projects`);
 
-  const defaultFilters = ["All", "Full Stack", "AI", "Research", "Frontend", "Desktop", "Web3"];
+  const defaultFilters = ["All", "Full Stack", "AI", "Research", "Desktop"];
   const filters = defaultFilters.filter((filter) => filter === "All" || projects.some((project) => project.category === filter));
   const filterRow = document.getElementById("projectFilters");
   filterRow.innerHTML = "";
@@ -360,7 +305,7 @@ function renderProjects(data) {
     metaRow.style.gap = "12px";
     metaRow.append(
       Object.assign(createElement("span", "project-type"), { innerHTML: projectIcon(project.icon) }),
-      createElement("span", "project-category", project.category || "")
+      createElement("span", "project-category", project.type || project.category || "")
     );
     metaRow.querySelector(".project-category").style.color = categoryColor(project.category);
     left.append(metaRow);
@@ -394,14 +339,24 @@ function renderProjects(data) {
 
     const title = createElement("h3", "project-title", project.title || "");
     const subtitle = createElement("p", "project-subtitle", project.subtitle || "");
-    const description = createElement("p", "project-description", project.description || "");
+    const details = createElement("div", "project-details");
+    [
+      ["Problem", project.problem || project.description || ""],
+      ["My Role", project.role || ""],
+      ["Result", project.result || ""],
+    ].forEach(([label, value]) => {
+      if (!value) return;
+      const row = createElement("p", "project-detail");
+      row.innerHTML = `<strong>${label}:</strong> ${value}`;
+      details.append(row);
+    });
 
     const techTags = createElement("div", "tech-tags");
     (project.techTags || []).forEach((tag) => {
       techTags.append(createElement("span", "tech-tag", tag));
     });
 
-    card.append(top, title, subtitle, description, techTags);
+    card.append(top, title, subtitle, details, techTags);
     grid.append(card);
   });
 
@@ -699,7 +654,6 @@ function setupAnchorLinks() {
 }
 
 function loadData() {
-  if (window.PORTFOLIO_DATA) return Promise.resolve(window.PORTFOLIO_DATA);
   return fetch(`data/site.json?ts=${Date.now()}`).then((response) => {
     if (!response.ok) {
       throw new Error(`Failed to load portfolio data (${response.status})`);
